@@ -92,8 +92,8 @@ class PelisViewController: UITableViewController, PelisListStorageDelegate {
         // Do any additional setup after loading the view.
         tableView.register(FranTableViewCell.self, forCellReuseIdentifier: "celdaPeli")
         
-        //tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         pelisListStorage.getPelis()
     }
     
