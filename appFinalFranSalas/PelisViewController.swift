@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//lo he dejado como tableviewcontroller siguiendo con el fallo
 class PelisViewController: UITableViewController, PelisListStorageDelegate {
    
     var pelis:[String] = []

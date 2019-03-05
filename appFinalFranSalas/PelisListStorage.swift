@@ -6,7 +6,7 @@
 //  Copyright © 2019 Fran. All rights reserved.
 //
 import UIKit
-import Alamofire
+//import Alamofire
 
 class PelisListStorage
 {
@@ -17,7 +17,7 @@ class PelisListStorage
     func getPelis()
     {
         
-        
+        /*
         Alamofire.request("https://swapi.co/api/films/").responseJSON { response in
             //Aquí ya podremos trabajar con los datos de la respuesta
             
@@ -39,7 +39,7 @@ class PelisListStorage
             }catch {
                 print("Error: \(error)")
             }
-        }
+        }*/
     }
     
   
