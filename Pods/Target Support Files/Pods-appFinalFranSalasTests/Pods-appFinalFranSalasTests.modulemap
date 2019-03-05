@@ -1,0 +1,6 @@
+framework module Pods_appFinalFranSalasTests {
+  umbrella header "Pods-appFinalFranSalasTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
