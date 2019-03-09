@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import SVGKit
     
     class FranTableViewCell: UITableViewCell {
 
         
+        @IBOutlet weak var flag: SVGKFastImageView!
         @IBOutlet weak var lblTitulo: UILabel!
+        
         override func awakeFromNib() {
             super.awakeFromNib()
             // Initialization code
-            
-            lblTitulo.text = "prueba"
-            print("llamada a francellview")
+
+           // print("llamada a francellview")
         }
 
         override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,7 +27,7 @@ import UIKit
             
             // Configure the view for the selected state
             
-           //print("fran cell selected")
+           //print("celda de--> \(self.lblTitulo.text)")
             
 
         }

@@ -7,6 +7,8 @@ target 'appFinalFranSalas' do
 
   # Pods for appFinalFranSalaso
   pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'SVGKit'
 
   target 'appFinalFranSalasTests' do
     inherit! :search_paths

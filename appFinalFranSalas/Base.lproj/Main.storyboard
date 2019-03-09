@@ -40,16 +40,16 @@
             </objects>
             <point key="canvasLocation" x="-3297" y="-1469"/>
         </scene>
-        <!--Pelis View Controller-->
+        <!--Pais View Controller-->
         <scene sceneID="dkN-Uw-TVB">
             <objects>
-                <viewController id="SMV-KC-sjI" customClass="PelisViewController" customModule="appFinalFranSalas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SMV-KC-sjI" customClass="PaisViewController" customModule="appFinalFranSalas" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zat-AP-9cS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaPeli" rowHeight="103" id="Ehq-Vr-BOG" customClass="FranTableViewCell" customModule="appFinalFranSalas" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaPais" rowHeight="103" id="Ehq-Vr-BOG" customClass="FranTableViewCell" customModule="appFinalFranSalas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ehq-Vr-BOG" id="SfY-d3-1bc">
@@ -57,27 +57,35 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-yW-DWC">
-                                            <rect key="frame" x="47" y="25" width="198" height="53"/>
+                                            <rect key="frame" x="0.0" y="11" width="252" height="81"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.95578402280807495" green="0.91406291723251343" blue="0.82995027303695679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-Bm-rwe">
+                                            <rect key="frame" x="252" y="11" width="123" height="81"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.86215588180000002" blue="0.2590885872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.97486716508865356" green="0.94123274087905884" blue="0.91731613874435425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="flag" destination="kfQ-Bm-rwe" id="WGR-wG-ieC"/>
                                     <outlet property="lblTitulo" destination="w3c-yW-DWC" id="yxa-C8-lKn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="SMV-KC-sjI" id="tq9-Zt-w4I"/>
-                            <outlet property="delegate" destination="SMV-KC-sjI" id="J08-wk-Jm3"/>
+                            <outlet property="dataSource" destination="SMV-KC-sjI" id="3fN-s4-yxc"/>
+                            <outlet property="delegate" destination="SMV-KC-sjI" id="gO7-yf-wQs"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="Zat-AP-9cS" id="2JO-To-VyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwZ-B6-kCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
