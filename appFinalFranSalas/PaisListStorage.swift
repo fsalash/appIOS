@@ -69,32 +69,40 @@ class PaisListStorage
         //print("obtencion de bandera \(pais.flag) para el pais: \(pais.name) y url de bandera param \(urlBandera) ")
         
         let urlBandera = URL(string: urlBanderaParam)
-      //  print("pais--> \(pais.name)  pide bandera -->\(urlBandera) ")
-        print("Voy por la bandera--> \(self.contadorBanderas) , pais-> \(self.contadorPaises)")
-        self.contadorBanderas += 1
+        print(urlBandera)
         
+        pais.flag.af_setImage(withURL: urlBandera!, placeholderImage: pais.flag.image){response in
+            
+            
+           
+           
+            print("se ha descargado la imagen parece \(response.data)")
+            
+            
+            self.paises.append(pais)
+            
+            self.delegatePais?.paisListStorage(self, didAddCountry: pais ,bandera: response.data!)
+        }
+       
+        
+       
+        
+        /*
         Alamofire.request(urlBandera!).responseImage { response in
             //Aquí ya podremos trabajar con los datos de la respuesta
 
         let imagen  = response.data!
-     
-        let country : Pais = Pais()
-        
-        country.name = pais.name
-        country.region = pais.region
-        
-                
-        //print("Pais--> \(self.contadorPaises), --> bandera: \(self.contadorBanderas)")
-        self.contadorBanderas += 1
-             
-
-        self.paises.append(country)
-        
-        self.delegatePais?.paisListStorage(self, didAddCountry: country)
             
+            //https://stackoverflow.com/questions/35854764/load-image-from-url-in-tableview-cell-from-alamofire-swift
+        pais.flag.af_setImage(withURL: urlBandera!, placeholderImage: pais.flag.image)
+            print(pais.flag.image)
+        self.paises.append(pais)
+        
+        self.delegatePais?.paisListStorage(self, didAddCountry: pais)
             
+ 
             
-    }
+    }*/
         
         
     }
@@ -107,7 +115,7 @@ class PaisListStorage
 
 protocol PaisListStorageDelegate: class
 {
-    func paisListStorage(_: PaisListStorage, didAddCountry country: Pais)
+    func paisListStorage(_: PaisListStorage, didAddCountry country: Pais, bandera: Data)
     func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p:Pais, b: UIImage)
     
 }

@@ -12,35 +12,28 @@ import UIKit
 //lo he dejado como tableviewcontroller siguiendo con el fallo
 class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
     
-    
-    
-    private  var bandera = UIImage()
+
+    private  var bandera = Data()
     private let paisListStorage = PaisListStorage ()
     //private var pelisCellControllers: [PelisCellController] = []
   
-   
     
     @IBOutlet var tableView: UITableView!
-     
+    
+    
+    func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p: Pais, b: UIImage) {
+        //lo dejo pero ahora mismo no lo uso
+    }
     
     func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
         
-       self.tableView.reloadData()
-        
+      //lo dejo pero ahora mismo no lo uso
     }
     
-    func paisListStorage(_: PaisListStorage, didAddCountryWithFlag p: Pais, b: UIImage) {
-      print ("ANTIGUO")
-    }
-    
-    func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p: Pais, b: UIImage) {
-        
-       // print ("pais \(p.name) ")
-       // print ("url bandera \(p.flag)")
-        
-        //bandera = b
-       // print("reload data porque tengo la bandera")
-        self.tableView?.reloadData()
+    func paisListStorage(_: PaisListStorage, didAddCountry p: Pais, bandera b: Data) {
+        bandera = b
+        print("reload data porque tengo la bandera \(bandera)")
+        self.tableView.reloadData()
     }
     
     
@@ -60,20 +53,19 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
      func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       // print("celda --> \(indexPath) \(paisListStorage.paises[indexPath.row])")
- 
+       print("celda --> \(indexPath) \(paisListStorage.paises[indexPath.row].name)")
+
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
          as! FranTableViewCell
         
-      
         cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
-       print("pais.flag.image --> \(paisListStorage.paises[indexPath.row].flag.image)")
-       
-       // cell.flag = paisListStorage.paises[indexPath.row].flag
-          return cell
+        cell.flag.image = UIImage(data: bandera) // no pinta nada
+        
+
+        return cell
     }
     
     
