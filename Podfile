@@ -8,7 +8,10 @@ target 'appFinalFranSalas' do
   # Pods for appFinalFranSalaso
   pod 'Alamofire'
   pod 'AlamofireImage'
-  pod 'SVGKit'
+  
+  #problemas a la hora de procesar svgs de banderas
+  #https://stackoverflow.com/questions/35691839/how-to-display-svg-image-using-swift/38152144
+  pod 'SVGKit' , :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x'
 
   target 'appFinalFranSalasTests' do
     inherit! :search_paths

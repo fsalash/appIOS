@@ -9,10 +9,10 @@
 import UIKit
 
 class FranViewController:  UIViewController {
-    
-    @IBAction func verPelis(_ sender: UIButton) {
+
+    @IBAction func verPaises(_ sender:   UIButton) {
         
-            performSegue(withIdentifier: "seguePeliculas", sender: sender)
+            performSegue(withIdentifier: "seguePaises", sender: sender)
     }
     
     

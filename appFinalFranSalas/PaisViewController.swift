@@ -55,7 +55,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-       // print("me llaman para ver cuantas filas pintar en la tabla --> \(paisListStorage.paises.count)")
+      
         return paisListStorage.paises.count
     }
     
@@ -68,30 +68,17 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
          as! FranTableViewCell
         
-        //let pais :Pais = paisListStorage.paises[indexPath.row]
-         //self.paisListStorage.getBandera(pais: pais, urlBandera: pais.flag)
-        
-        //print("me llaman para reutilizar celda con indice \(indexPath.row) ")
-        // Configure the cell...
-        //print(cell.titulo)
-        
-        //print("cellForRowAt")
-       // print("title: \(paisListStorage.paises[indexPath.row])")
-        //cell.textLabel?.text =  paisListStorage.paises[indexPath.row].name
+      
         cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
        print("pais.flag.image --> \(paisListStorage.paises[indexPath.row].flag.image)")
        
-        cell.flag = paisListStorage.paises[indexPath.row].flag
-        //cell.txtTituloPelicula?.text = pelisListStorage.pelis[indexPath.row].title
-        //cell.setDirector(director: pelisListStorage.pelis[indexPath.row].director)
-        /*cell.lblFecha.text = "pelisListStorage.pelis[indexPath.row].release_date"
-         */
-        return cell
+       // cell.flag = paisListStorage.paises[indexPath.row].flag
+          return cell
     }
     
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
     
 
@@ -102,8 +89,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         print("pelisviewcontroller")
         // Do any additional setup after loading the view.
-        //tableView.register(FranTableViewCell.self, forCellReuseIdentifier: "celdaPais")
-        self.paisListStorage.delegatePais = self
+          self.paisListStorage.delegatePais = self
 
         paisListStorage.getPaises()
     }

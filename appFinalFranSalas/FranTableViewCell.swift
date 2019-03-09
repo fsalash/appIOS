@@ -12,7 +12,7 @@ import SVGKit
     class FranTableViewCell: UITableViewCell {
 
         
-        @IBOutlet weak var flag: SVGKFastImageView!
+        @IBOutlet weak var flag: UIImageView!
         @IBOutlet weak var lblTitulo: UILabel!
         
         override func awakeFromNib() {

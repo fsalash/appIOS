@@ -52,6 +52,7 @@ class PaisListStorage
                     
                     self.getBandera(pais: country, urlBanderaParam: flag)
                     
+                    //el delegado final será el de bandera para pintar en tabla
                     //self.paises.append(country)
                     //self.delegatePais?.paisListStorage(self, didAddCountry: country)
                         
@@ -74,29 +75,19 @@ class PaisListStorage
         
         Alamofire.request(urlBandera!).responseImage { response in
             //Aquí ya podremos trabajar con los datos de la respuesta
- 
-        //https://stackoverflow.com/questions/39858747/get-image-data-with-alamofire-request
-            
-            
-        let imagen  = response.data!
-                
 
-            
+        let imagen  = response.data!
+     
         let country : Pais = Pais()
         
         country.name = pais.name
         country.region = pais.region
         
-            
                 
         //print("Pais--> \(self.contadorPaises), --> bandera: \(self.contadorBanderas)")
         self.contadorBanderas += 1
-        
-        let imgSVG = SVGKImage(data: imagen)
-        pais.flag =  SVGKFastImageView(svgkImage: imgSVG)
-        
-        
-        //country.flag.image = imgSVKit?.uiImage
+             
+
         self.paises.append(country)
         
         self.delegatePais?.paisListStorage(self, didAddCountry: country)

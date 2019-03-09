@@ -12,7 +12,7 @@ class Pais{
     
     var name = ""
     var region = ""
-    var flag = SVGKFastImageView()
+    var flag = UIImageView()
     
 }
 
