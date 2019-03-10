@@ -66,15 +66,15 @@
                                             <color key="textColor" red="1" green="0.16633475640000001" blue="0.038399833229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-Bm-rwe">
-                                            <rect key="frame" x="252" y="11" width="107" height="81"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-i1-8Lf">
+                                            <rect key="frame" x="223" y="11" width="136" height="81"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.97486716508865356" green="0.94123274087905884" blue="0.91731613874435425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="flag" destination="kfQ-Bm-rwe" id="WGR-wG-ieC"/>
+                                    <outlet property="flag" destination="hVB-i1-8Lf" id="0eo-Gm-SVW"/>
                                     <outlet property="lblTitulo" destination="w3c-yW-DWC" id="yxa-C8-lKn"/>
                                 </connections>
                             </tableViewCell>

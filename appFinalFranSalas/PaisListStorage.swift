@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import Macaw
 import SVGKit
 
 
@@ -26,98 +27,108 @@ class PaisListStorage
         Alamofire.request("https://restcountries.eu/rest/v2/all").responseJSON { response in
             //Aquí ya podremos trabajar con los datos de la respuesta
             
-            do{
+    
                 let data = response.data
        
                 let paisesResult = (response.result.value as! NSArray)
              
-                for p in paisesResult{
-                 //   print ("------- \(p))")
+                for p in paisesResult {
                     
-                    let pais = p as! NSDictionary
-               
-                    let nombre = pais.value(forKey:"name") as! String
-                    let region = pais.value(forKey:"region") as! String
-                    let flag = pais.value(forKey:"flag") as! String
+                    if(self.contadorPaises < 15){
+                     //   print ("------- \(p))")
                         
-                    //print ("Pais--> \(nombre) ")
-                    
-                    let country : Pais = Pais()
-                    
-                    country.name = nombre
-                    country.region = region
-                    
-                    print("Voy por el pais--> \(self.contadorPaises)")
-                    self.contadorPaises += 1
-                    
-                    self.getBandera(pais: country, urlBanderaParam: flag)
-                    
-                    //el delegado final será el de bandera para pintar en tabla
-                    //self.paises.append(country)
-                    //self.delegatePais?.paisListStorage(self, didAddCountry: country)
+                        let pais = p as! NSDictionary
+                   /*
+                        let nombre = pais.value(forKey:"name") as! String
+                        let region = pais.value(forKey:"region") as! String
+                        let flag = pais.value(forKey:"flag") as! String
+                         
+                        //print ("Pais--> \(nombre) ")
                         
-                }
-                
+                        let country : Pais = Pais()
+                        
+                        country.name = nombre
+                        country.region = region*/
+                        
+                       // print("Voy por el pais--> \(self.contadorPaises)")
+                        self.contadorPaises += 1
+                        
+                        self.getBandera(paisDictionary: pais)
+                        
+                        //el delegado final será el de bandera para pintar en tabla
+                        //self.paises.append(country)
+                        //self.delegatePais?.paisListStorage(self, didAddCountry: country)
+                    }
+                    else{
+                        return
+                    }
             }
-            
+                
         }
+            
         
     }
     
-    func getBandera(pais: Pais,urlBanderaParam:String){
+    func getBandera(paisDictionary: NSDictionary){
         
         //print("obtencion de bandera \(pais.flag) para el pais: \(pais.name) y url de bandera param \(urlBandera) ")
         
-        let urlBandera = URL(string: urlBanderaParam)
-        print(urlBandera)
+        //print("Voy por la bandera--> \(self.contadorBanderas)")
+        self.contadorBanderas += 1
         
-        pais.flag.af_setImage(withURL: urlBandera!, placeholderImage: pais.flag.image){response in
+        
+        let urlBandera = URL(string: paisDictionary.value(forKey:"flag") as! String)
+        //print(urlBandera)
+        
+ 
+        
+      
+        Alamofire.request(urlBandera!).response { response in
+            //Aquí ya podremos trabajar con los datos de la respuesta
+ 
+            print(response.response.debugDescription)
+            guard response.data != nil else {
+                print("Could not get image from image URL returned in search results")
+                return
+            }
+
+            let uiimagen  = response.data!
+        
+            let pais = Pais()
             
+            let anSVGImage: SVGKImage = SVGKImage(data: uiimagen)
             
-           
-           
-            print("se ha descargado la imagen parece \(response.data)")
+            print(anSVGImage.size)
             
+            pais.name = paisDictionary.value(forKey:"name") as! String
+            pais.region = paisDictionary.value(forKey:"region") as! String
+            pais.flag.image = anSVGImage.uiImage
+
+            //print(pais.flag.image)
+            //pais.flag.af_setImage(withURL: urlBandera!)
             
             self.paises.append(pais)
-            
-            self.delegatePais?.paisListStorage(self, didAddCountry: pais ,bandera: response.data!)
-        }
-       
         
-       
-        
-        /*
-        Alamofire.request(urlBandera!).responseImage { response in
-            //Aquí ya podremos trabajar con los datos de la respuesta
+            print(self.paises.count)
 
-        let imagen  = response.data!
-            
-            //https://stackoverflow.com/questions/35854764/load-image-from-url-in-tableview-cell-from-alamofire-swift
-        pais.flag.af_setImage(withURL: urlBandera!, placeholderImage: pais.flag.image)
-            print(pais.flag.image)
-        self.paises.append(pais)
-        
-        self.delegatePais?.paisListStorage(self, didAddCountry: pais)
-            
- 
-            
-    }*/
-        
-        
+           self.delegatePais?.paisListStorage(self, didAddCountry: pais)
     }
+        
+        
+    
     
 }
         
-
+}
 
 
 
 protocol PaisListStorageDelegate: class
 {
-    func paisListStorage(_: PaisListStorage, didAddCountry country: Pais, bandera: Data)
+    func paisListStorage(_: PaisListStorage, didAddCountry country: Pais)
     func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p:Pais, b: UIImage)
     
 }
+
 
 

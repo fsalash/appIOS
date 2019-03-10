@@ -13,7 +13,7 @@ import UIKit
 class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
     
 
-    private  var bandera = Data()
+    private  var flag = Data()
     private let paisListStorage = PaisListStorage ()
     //private var pelisCellControllers: [PelisCellController] = []
   
@@ -28,11 +28,13 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
         
       //lo dejo pero ahora mismo no lo uso
+        print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \(pais.name), \(pais.region)")
+         self.tableView.reloadData()
     }
     
     func paisListStorage(_: PaisListStorage, didAddCountry p: Pais, bandera b: Data) {
-        bandera = b
-        print("reload data porque tengo la bandera \(bandera)")
+        self.flag = b
+        print("reload data porque tengo la bandera \(self.flag)")
         self.tableView.reloadData()
     }
     
@@ -62,9 +64,11 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
          as! FranTableViewCell
         
         cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
-        cell.flag.image = UIImage(data: bandera) // no pinta nada
         
-
+        
+            cell.flag = paisListStorage.paises[indexPath.row].flag
+        
+        cell.setNeedsLayout()
         return cell
     }
     
