@@ -81,35 +81,38 @@ class PaisListStorage
         //print(urlBandera)
         
  
-        
+        let urlFake = URL (string: "https://support.squarespace.com/hc/article_attachments/115009132068/edit-image-block.png")
       
         Alamofire.request(urlBandera!).response { response in
             //Aquí ya podremos trabajar con los datos de la respuesta
  
-            print(response.response.debugDescription)
-            guard response.data != nil else {
-                print("Could not get image from image URL returned in search results")
+            //print(response.debugDescription)
+            guard let image = response.data else {
+                // Handle error
+                print("error obteniendo imagen")
                 return
             }
 
-            let uiimagen  = response.data!
-        
-            let pais = Pais()
+             let imagen = image
             
-            let anSVGImage: SVGKImage = SVGKImage(data: uiimagen)
+             let pais = Pais()
             
-            print(anSVGImage.size)
+            let anSVGImage = SVGKFastImageView(svgkImage: SVGKImage(named: "heart.svg"))
+            
+            //print(anSVGImage.size)
             
             pais.name = paisDictionary.value(forKey:"name") as! String
             pais.region = paisDictionary.value(forKey:"region") as! String
-            pais.flag.image = anSVGImage.uiImage
+            pais.flag = response.data!
+            
+            //pais.flag.image?.af_imageScaled(to: CGSize(width: 50, height: 50))
 
             //print(pais.flag.image)
             //pais.flag.af_setImage(withURL: urlBandera!)
             
             self.paises.append(pais)
         
-            print(self.paises.count)
+            //print(self.paises.count)
 
            self.delegatePais?.paisListStorage(self, didAddCountry: pais)
     }

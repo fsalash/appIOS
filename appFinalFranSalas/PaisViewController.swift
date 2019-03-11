@@ -7,14 +7,15 @@
 //
 import Foundation
 import UIKit
-
+import SVGKit
 
 //lo he dejado como tableviewcontroller siguiendo con el fallo
 class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
-    
-
+   
     private  var flag = Data()
     private let paisListStorage = PaisListStorage ()
+  
+    private let paisDetalle = DetallePaisViewController()
     //private var pelisCellControllers: [PelisCellController] = []
   
     
@@ -28,13 +29,14 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
         
       //lo dejo pero ahora mismo no lo uso
-        print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \(pais.name), \(pais.region)")
+     //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \(pais.name), \(pais.region)")
+        
          self.tableView.reloadData()
     }
     
     func paisListStorage(_: PaisListStorage, didAddCountry p: Pais, bandera b: Data) {
         self.flag = b
-        print("reload data porque tengo la bandera \(self.flag)")
+        //print("reload data porque tengo la bandera \(self.flag)")
         self.tableView.reloadData()
     }
     
@@ -55,9 +57,25 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
      func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       print("celda --> \(indexPath) \(paisListStorage.paises[indexPath.row].name)")
-
+       print("performSegue")
+        
+         
+        performSegue(withIdentifier: "segueDetallePais", sender: paisListStorage.paises[indexPath.row])
     }
+    
+    override func prepare(for segue: UIStoryboardSegue!, sender: Any?) {
+       print("prepareForSegue")
+        if segue.identifier == "segueDetallePais"
+        {
+            let pais = sender as! Pais!
+            if let destinationVC = segue.destination as? DetallePaisViewController {
+                //print(pais!.name)
+                //print(destinationVC.lblDetallePais.text)
+                destinationVC.nombrePais = pais!.name
+            }
+        }
+    }
+    
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
@@ -66,12 +84,23 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
         
         
-            cell.flag = paisListStorage.paises[indexPath.row].flag
+        let data = paisListStorage.paises[indexPath.row].flag
+        print("data--> \(data)")
+        cell.flag.image = SVGKFastImageView(svgkImage: SVGKImage(data:  data))?.image.uiImage
         
-        cell.setNeedsLayout()
+      
         return cell
     }
     
+    func callSegueFromCell(myData dataobject: AnyObject) {
+       
+        paisDetalle.lblDetallePais.text = "hola desde otro lado"
+        performSegue(withIdentifier: "segueDetallePais", sender: self)
+    }
+    
+    func rellenaLable(myData dataobject: AnyObject) {
+        print("rellena label")
+    }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

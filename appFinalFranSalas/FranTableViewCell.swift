@@ -6,6 +6,7 @@
 //  Copyright © 2019 Fran. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SVGKit
     
@@ -27,13 +28,13 @@ import SVGKit
             
             // Configure the view for the selected state
             
-           //print("celda de--> \(self.lblTitulo.text)")
-            
-
-        }
+             
+            }
         
       
         
     }
 
-
+protocol MyCustomCellDelegator {
+    func callSegueFromCell(myData dataobject: AnyObject)
+}

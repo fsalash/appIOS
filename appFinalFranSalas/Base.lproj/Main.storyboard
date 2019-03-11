@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="1" green="0.86215588180000002" blue="0.2590885872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Obten Paises"/>
+                                <state key="normal" title="Obtener Paises"/>
                                 <connections>
                                     <action selector="verPaises:" destination="sju-7h-abL" eventType="touchUpInside" id="wHY-ev-x2V"/>
                                 </connections>
@@ -66,8 +66,8 @@
                                             <color key="textColor" red="1" green="0.16633475640000001" blue="0.038399833229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-i1-8Lf">
-                                            <rect key="frame" x="223" y="11" width="136" height="81"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-i1-8Lf">
+                                            <rect key="frame" x="260" y="11" width="105" height="81"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -86,11 +86,39 @@
                     </tableView>
                     <connections>
                         <outlet property="tableView" destination="Zat-AP-9cS" id="2JO-To-VyZ"/>
+                        <segue destination="9tC-dq-82g" kind="show" identifier="segueDetallePais" id="mq4-D4-aW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwZ-B6-kCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2316" y="-1684.4077961019491"/>
+        </scene>
+        <!--Detalle Pais View Controller-->
+        <scene sceneID="Ntl-nr-mZq">
+            <objects>
+                <viewController id="9tC-dq-82g" customClass="DetallePaisViewController" customModule="appFinalFranSalas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hV-T6-75p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-vm-PFh">
+                                <rect key="frame" x="40" y="148" width="294" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y1C-gs-tpw"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblDetallePais" destination="Yxs-vm-PFh" id="lYP-Qg-W4R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzx-mE-5kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1314.4000000000001" y="-1755.4722638680662"/>
         </scene>
     </scenes>
 </document>
