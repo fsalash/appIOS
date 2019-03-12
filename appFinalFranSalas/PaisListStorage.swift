@@ -34,7 +34,7 @@ class PaisListStorage
              
                 for p in paisesResult {
                     
-                    if(self.contadorPaises < 15){
+                    
                      //   print ("------- \(p))")
                         
                         let pais = p as! NSDictionary
@@ -51,17 +51,14 @@ class PaisListStorage
                         country.region = region*/
                         
                        // print("Voy por el pais--> \(self.contadorPaises)")
-                        self.contadorPaises += 1
+                        
                         
                         self.getBandera(paisDictionary: pais)
                         
                         //el delegado final será el de bandera para pintar en tabla
                         //self.paises.append(country)
                         //self.delegatePais?.paisListStorage(self, didAddCountry: country)
-                    }
-                    else{
-                        return
-                    }
+                   
             }
                 
         }
