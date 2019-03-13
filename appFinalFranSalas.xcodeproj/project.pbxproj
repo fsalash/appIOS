@@ -17,11 +17,7 @@
 		A18F474C222A9F9000401F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18F474A222A9F9000401F6A /* LaunchScreen.storyboard */; };
 		A18F4757222A9F9000401F6A /* appFinalFranSalasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F4756222A9F9000401F6A /* appFinalFranSalasTests.swift */; };
 		A18F4762222A9F9000401F6A /* appFinalFranSalasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F4761222A9F9000401F6A /* appFinalFranSalasUITests.swift */; };
-		A18F4770222AB01F00401F6A /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A18F476F222AB01F00401F6A /* logo.jpeg */; };
 		A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198C0F8222D78890039E350 /* PaisViewController.swift */; };
-		A199D4BC2236EF9900118B64 /* ala.svg in Resources */ = {isa = PBXBuildFile; fileRef = A199D4BB2236EF9900118B64 /* ala.svg */; };
-		A199D4BF2236F3FA00118B64 /* heart.svg in Resources */ = {isa = PBXBuildFile; fileRef = A199D4BE2236F3FA00118B64 /* heart.svg */; };
-		A199E065222AE344002E894D /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = A199E064222AE344002E894D /* logo2.png */; };
 		A199E07D222AF940002E894D /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199E07C222AF940002E894D /* Pais.swift */; };
 		A19DF8AF223590D600546AA0 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8AE223590D600546AA0 /* SVGKit.framework */; };
 		A19DF8B1223590E000546AA0 /* Macaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8B0223590E000546AA0 /* Macaw.framework */; };
@@ -29,6 +25,8 @@
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
 		A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB10222D32B300ECF30A /* FranViewController.swift */; };
 		A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1210822357538008B0289 /* DetallePaisViewController.swift */; };
+		A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C91ED922396EA900CA7C12 /* masInfo.png */; };
+		A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +67,7 @@
 		A18F475D222A9F9000401F6A /* appFinalFranSalasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appFinalFranSalasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18F4761222A9F9000401F6A /* appFinalFranSalasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appFinalFranSalasUITests.swift; sourceTree = "<group>"; };
 		A18F4763222A9F9000401F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A18F476F222AB01F00401F6A /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 		A198C0F8222D78890039E350 /* PaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisViewController.swift; sourceTree = "<group>"; };
-		A199D4BB2236EF9900118B64 /* ala.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ala.svg; sourceTree = "<group>"; };
-		A199D4BE2236F3FA00118B64 /* heart.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = heart.svg; path = "../../../../../../../../../Downloads/SVGKit-3.x/Demo-Samples/SVG/heart.svg"; sourceTree = "<group>"; };
-		A199E064222AE344002E894D /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = appFinalFranSalas/logo2.png; sourceTree = "<group>"; };
 		A199E07C222AF940002E894D /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		A19DF8AE223590D600546AA0 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19DF8B0223590E000546AA0 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +75,8 @@
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
 		A1B8CB10222D32B300ECF30A /* FranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranViewController.swift; sourceTree = "<group>"; };
 		A1C1210822357538008B0289 /* DetallePaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePaisViewController.swift; sourceTree = "<group>"; };
+		A1C91ED922396EA900CA7C12 /* masInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = masInfo.png; path = appFinalFranSalas/masInfo.png; sourceTree = SOURCE_ROOT; };
+		A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanderaListStorage.swift; sourceTree = "<group>"; };
 		A40BAE591CEE91215C30C432 /* Pods-appFinalFranSalas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.debug.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.debug.xcconfig"; sourceTree = "<group>"; };
 		D15145C4C5211CF5D93A978B /* Pods-appFinalFranSalasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalasTests.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +127,6 @@
 		A18F4732222A9F8E00401F6A = {
 			isa = PBXGroup;
 			children = (
-				A199E064222AE344002E894D /* logo2.png */,
-				A199D4BE2236F3FA00118B64 /* heart.svg */,
-				A199D4BB2236EF9900118B64 /* ala.svg */,
 				A18F473D222A9F8E00401F6A /* appFinalFranSalas */,
 				A18F4755222A9F9000401F6A /* appFinalFranSalasTests */,
 				A18F4760222A9F9000401F6A /* appFinalFranSalasUITests */,
@@ -162,17 +155,18 @@
 				A1B8CABF222C299B00ECF30A /* Model */,
 				A1B8CAC0222C29A300ECF30A /* View */,
 				A18F4742222A9F8E00401F6A /* Main.storyboard */,
+				A1C91ED922396EA900CA7C12 /* masInfo.png */,
 				A1C1210822357538008B0289 /* DetallePaisViewController.swift */,
 				A1B8CB10222D32B300ECF30A /* FranViewController.swift */,
 				A198C0F8222D78890039E350 /* PaisViewController.swift */,
 				A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */,
 				A18F4748222A9F9000401F6A /* Assets.xcassets */,
-				A18F476F222AB01F00401F6A /* logo.jpeg */,
 				A18F474A222A9F9000401F6A /* LaunchScreen.storyboard */,
 				A18F474D222A9F9000401F6A /* Info.plist */,
 				A18F4745222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld */,
 				A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */,
 				A199E07C222AF940002E894D /* Pais.swift */,
+				A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */,
 			);
 			path = appFinalFranSalas;
 			sourceTree = "<group>";
@@ -345,12 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18F474C222A9F9000401F6A /* LaunchScreen.storyboard in Resources */,
-				A199E065222AE344002E894D /* logo2.png in Resources */,
 				A18F4749222A9F9000401F6A /* Assets.xcassets in Resources */,
-				A199D4BF2236F3FA00118B64 /* heart.svg in Resources */,
-				A199D4BC2236EF9900118B64 /* ala.svg in Resources */,
-				A18F4770222AB01F00401F6A /* logo.jpeg in Resources */,
 				A18F4744222A9F8E00401F6A /* Main.storyboard in Resources */,
+				A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +472,7 @@
 				A18F4747222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld in Sources */,
 				A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */,
 				A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */,
+				A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */,
 				A199E07D222AF940002E894D /* Pais.swift in Sources */,
 				A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */,
 				A18F473F222A9F8E00401F6A /* AppDelegate.swift in Sources */,

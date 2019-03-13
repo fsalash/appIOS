@@ -9,37 +9,23 @@ import Foundation
 import UIKit
 import SVGKit
 
-//lo he dejado como tableviewcontroller siguiendo con el fallo
 class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
    
     private  var flag = Data()
     private let paisListStorage = PaisListStorage ()
   
     private let paisDetalle = DetallePaisViewController()
-    //private var pelisCellControllers: [PelisCellController] = []
+
   
     
     @IBOutlet var tableView: UITableView!
     
     
-    func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p: Pais, b: UIImage) {
-        //lo dejo pero ahora mismo no lo uso
-    }
-    
     func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
         
-      //lo dejo pero ahora mismo no lo uso
-     //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \(pais.name), \(pais.region)")
-        
+     //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \
          self.tableView.reloadData()
     }
-    
-    func paisListStorage(_: PaisListStorage, didAddCountry p: Pais, bandera b: Data) {
-        self.flag = b
-        //print("reload data porque tengo la bandera \(self.flag)")
-        self.tableView.reloadData()
-    }
-    
     
     
     // MARK: - Table view data source
@@ -56,51 +42,50 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return paisListStorage.paises.count
     }
     
-     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       print("performSegue")
+  
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAtIndexPath")
         
-         
-        performSegue(withIdentifier: "segueDetallePais", sender: paisListStorage.paises[indexPath.row])
+        let paisSeleccionado = paisListStorage.paises[indexPath.row]
+        //segue para ir a detalle de pais
+         performSegue(withIdentifier: "segueDetallePais", sender: paisSeleccionado)
     }
     
-    override func prepare(for segue: UIStoryboardSegue!, sender: Any?) {
-       print("prepareForSegue")
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       //print("prepareForSegue")
         if segue.identifier == "segueDetallePais"
         {
-            let pais = sender as! Pais!
+            let pais = sender as! Pais
             if let destinationVC = segue.destination as? DetallePaisViewController {
                 //print(pais!.name)
                 //print(destinationVC.lblDetallePais.text)
-                destinationVC.nombrePais = pais!.name
+                destinationVC.pais = pais
             }
         }
     }
     
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
          as! FranTableViewCell
         
         cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
+        cell.flag.image = UIImage(named: "masInfo.png")
         
-        
-        let data = paisListStorage.paises[indexPath.row].flag
-        print("data--> \(data)")
-        cell.flag.image = SVGKFastImageView(svgkImage: SVGKImage(data:  data))?.image.uiImage
         
       
         return cell
     }
     
+    
     func callSegueFromCell(myData dataobject: AnyObject) {
        
-        paisDetalle.lblDetallePais.text = "hola desde otro lado"
         performSegue(withIdentifier: "segueDetallePais", sender: self)
     }
     
-    func rellenaLable(myData dataobject: AnyObject) {
-        print("rellena label")
-    }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -110,8 +95,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
-        
         print("pelisviewcontroller")
         // Do any additional setup after loading the view.
           self.paisListStorage.delegatePais = self

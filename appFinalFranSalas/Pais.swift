@@ -11,7 +11,8 @@ class Pais{
     
     var name = ""
     var region = ""
-    var flag = Data()
+    var flag = ""
+    var dataFlag = Data()
     
 }
 

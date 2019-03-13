@@ -7,20 +7,44 @@
 //
 
 import UIKit
+import SVGKit
 
-class DetallePaisViewController: UIViewController {
+class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
+   
 
     @IBOutlet weak var lblDetallePais: UILabel!
+    @IBOutlet weak var imgBanderaPais: UIImageView!
     
-    var nombrePais = ""
+    private let banderaListStorage = BanderaListStorage ()
+    
+    var pais = Pais()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("DetallePaisViewController")
+      
+        self.banderaListStorage.delegateBandera = self
         
-        lblDetallePais.text = nombrePais
+        lblDetallePais.text = pais.name + "(" + pais.region + ")"
+        
+        self.banderaListStorage.getBandera(pais: pais)
+      
+        
     }
+    
+    func banderaStorage(_: BanderaListStorage, banderaLista country: Pais) {
+        
+        
+        let imagenSVG = SVGKFastImageView(svgkImage: SVGKImage(data: country.dataFlag))
+        
+        imgBanderaPais.image = imagenSVG?.image.uiImage
+        
+        
+    }
+    
+    
     
 
     /*
@@ -33,6 +57,7 @@ class DetallePaisViewController: UIViewController {
     }
     */
 
+   
 }
 
 

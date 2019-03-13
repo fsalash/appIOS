@@ -7,9 +7,7 @@
 //
 import UIKit
 import Alamofire
-import AlamofireImage
-import Macaw
-import SVGKit
+
 
 
 class PaisListStorage
@@ -18,7 +16,7 @@ class PaisListStorage
     
     var paises: [Pais] = []
     var contadorPaises = 0
-      var contadorBanderas = 0
+    var contadorBanderas = 0
     
     func getPaises()
     {
@@ -33,91 +31,34 @@ class PaisListStorage
                 let paisesResult = (response.result.value as! NSArray)
              
                 for p in paisesResult {
-                    
-                    
-                     //   print ("------- \(p))")
-                        
+
                         let pais = p as! NSDictionary
-                   /*
-                        let nombre = pais.value(forKey:"name") as! String
-                        let region = pais.value(forKey:"region") as! String
-                        let flag = pais.value(forKey:"flag") as! String
-                         
-                        //print ("Pais--> \(nombre) ")
-                        
-                        let country : Pais = Pais()
-                        
-                        country.name = nombre
-                        country.region = region*/
-                        
-                       // print("Voy por el pais--> \(self.contadorPaises)")
-                        
-                        
-                        self.getBandera(paisDictionary: pais)
-                        
-                        //el delegado final será el de bandera para pintar en tabla
-                        //self.paises.append(country)
-                        //self.delegatePais?.paisListStorage(self, didAddCountry: country)
+                 
+                        //Primera prueba para poner la bandera en la pantalla principal (ahora pongo imagen de mas info
+                        //self.getBandera(paisDictionary: pais)
+           
+                    
+                     let nombre = pais.value(forKey:"name") as! String
+                     let region = pais.value(forKey:"region") as! String
+                     let flag = pais.value(forKey:"flag") as! String
+   
+                     
+                     let country : Pais = Pais()
+                     
+                     country.name = nombre
+                     country.region = region
+                     country.flag = flag
+                    
+                    self.paises.append(country)
+                    
+                    // print("Voy por el pais--> \(self.contadorPaises)")
+                    self.delegatePais?.paisListStorage(self, didAddCountry: country)
                    
             }
                 
         }
             
-        
     }
-    
-    func getBandera(paisDictionary: NSDictionary){
-        
-        //print("obtencion de bandera \(pais.flag) para el pais: \(pais.name) y url de bandera param \(urlBandera) ")
-        
-        //print("Voy por la bandera--> \(self.contadorBanderas)")
-        self.contadorBanderas += 1
-        
-        
-        let urlBandera = URL(string: paisDictionary.value(forKey:"flag") as! String)
-        //print(urlBandera)
-        
- 
-        let urlFake = URL (string: "https://support.squarespace.com/hc/article_attachments/115009132068/edit-image-block.png")
-      
-        Alamofire.request(urlBandera!).response { response in
-            //Aquí ya podremos trabajar con los datos de la respuesta
- 
-            //print(response.debugDescription)
-            guard let image = response.data else {
-                // Handle error
-                print("error obteniendo imagen")
-                return
-            }
-
-             let imagen = image
-            
-             let pais = Pais()
-            
-            let anSVGImage = SVGKFastImageView(svgkImage: SVGKImage(named: "heart.svg"))
-            
-            //print(anSVGImage.size)
-            
-            pais.name = paisDictionary.value(forKey:"name") as! String
-            pais.region = paisDictionary.value(forKey:"region") as! String
-            pais.flag = response.data!
-            
-            //pais.flag.image?.af_imageScaled(to: CGSize(width: 50, height: 50))
-
-            //print(pais.flag.image)
-            //pais.flag.af_setImage(withURL: urlBandera!)
-            
-            self.paises.append(pais)
-        
-            //print(self.paises.count)
-
-           self.delegatePais?.paisListStorage(self, didAddCountry: pais)
-    }
-        
-        
-    
-    
-}
         
 }
 
@@ -126,7 +67,6 @@ class PaisListStorage
 protocol PaisListStorageDelegate: class
 {
     func paisListStorage(_: PaisListStorage, didAddCountry country: Pais)
-    func banderaListStorage(_: PaisListStorage, didAddCountryWithFlag p:Pais, b: UIImage)
     
 }
 

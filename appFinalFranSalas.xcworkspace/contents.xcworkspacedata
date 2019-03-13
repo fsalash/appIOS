@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:appFinalFranSalas/masInfo.png">
+   </FileRef>
+   <FileRef
       location = "group:appFinalFranSalas.xcodeproj">
    </FileRef>
    <FileRef
