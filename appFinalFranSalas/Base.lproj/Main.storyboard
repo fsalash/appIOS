@@ -49,14 +49,15 @@
                         <color key="backgroundColor" red="0.95578402280807495" green="0.91406291723251343" blue="0.82995027303695679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lL4-2m-zUl"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="zkL-ii-jGC"/>
                     <navigationItem key="navigationItem" id="fH1-2d-OFb"/>
                     <connections>
-                        <segue destination="gMb-gG-aBZ" kind="showDetail" identifier="seguePaises" id="D8v-NH-XoL"/>
+                        <segue destination="SMV-KC-sjI" kind="show" identifier="seguePaises" id="YOm-um-yBK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dL-ql-NzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-480.80000000000001" y="-1469.4152923538231"/>
+            <point key="canvasLocation" x="1105" y="-1469"/>
         </scene>
         <!--CountryPedia APP-->
         <scene sceneID="dkN-Uw-TVB">
@@ -102,7 +103,7 @@
                             <outlet property="delegate" destination="SMV-KC-sjI" id="gO7-yf-wQs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XV3-ao-Llk"/>
+                    <navigationItem key="navigationItem" title="Atras" id="XV3-ao-Llk"/>
                     <connections>
                         <outlet property="tableView" destination="Zat-AP-9cS" id="2JO-To-VyZ"/>
                         <segue destination="9tC-dq-82g" kind="show" identifier="segueDetallePais" id="mq4-D4-aW8"/>
@@ -110,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwZ-B6-kCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440.8" y="-1684.4077961019491"/>
+            <point key="canvasLocation" x="2380" y="-1684.4077961019491"/>
         </scene>
         <!--Detalle Pais View Controller-->
         <scene sceneID="Ntl-nr-mZq">
@@ -125,7 +126,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRr-yg-NFF">
-                                        <rect key="frame" x="136" y="250" width="199" height="27"/>
+                                        <rect key="frame" x="119" y="250" width="141" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -166,6 +167,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="posEnMapa.png" translatesAutoresizingMaskIntoConstraints="NO" id="8qY-hL-uOS">
+                                        <rect key="frame" x="306" y="244" width="29" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Co-ca-oUy" appends="YES" id="hXx-wW-dwd"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -236,6 +245,7 @@
                         <outlet property="txtMonedas" destination="wHM-gk-J3R" id="J7g-Sh-9Ce"/>
                         <outlet property="txtPoblacion" destination="lRr-yg-NFF" id="gjB-kO-r2U"/>
                         <outlet property="txtRegion" destination="eux-Hb-wPy" id="jQH-pO-5Hq"/>
+                        <segue destination="dOJ-NB-fGh" kind="show" identifier="segueMapaPais" id="kgi-Ka-8SV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hzx-mE-5kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,26 +254,45 @@
                         <action selector="tocanBtnFavorito:" destination="9tC-dq-82g" id="N2Z-eq-gDl"/>
                     </connections>
                 </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2442.4000000000001" y="-1755.4722638680662"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Aya-rk-CAm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gMb-gG-aBZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZGI-KQ-xdO">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <tapGestureRecognizer id="1Co-ca-oUy">
                     <connections>
-                        <segue destination="SMV-KC-sjI" kind="relationship" relationship="rootViewController" id="dRY-HH-g9E"/>
+                        <action selector="posMapa:" destination="9tC-dq-82g" id="hky-Ix-OIt"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8aG-jH-evj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="501.60000000000002" y="-1684.4077961019491"/>
+            <point key="canvasLocation" x="3381.5999999999999" y="-1755.4722638680662"/>
+        </scene>
+        <!--Mapa Pais View Controller-->
+        <scene sceneID="rnT-cX-f0R">
+            <objects>
+                <viewController id="dOJ-NB-fGh" customClass="MapaPaisViewController" customModule="appFinalFranSalas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C19-9b-98c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEs-fO-4K7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dOJ-NB-fGh" id="IXW-OA-UHW"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uEs-fO-4K7" firstAttribute="bottom" secondItem="Sge-gj-Msi" secondAttribute="bottom" id="FUv-Mo-Ni5"/>
+                            <constraint firstItem="uEs-fO-4K7" firstAttribute="top" secondItem="Sge-gj-Msi" secondAttribute="top" id="LhL-Zf-d4y"/>
+                            <constraint firstAttribute="trailing" secondItem="uEs-fO-4K7" secondAttribute="trailing" id="Zs0-JN-x59"/>
+                            <constraint firstItem="uEs-fO-4K7" firstAttribute="leading" secondItem="C19-9b-98c" secondAttribute="leading" id="sq3-LV-eHW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sge-gj-Msi"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapaPais" destination="uEs-fO-4K7" id="MUf-Wb-t6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dt-JQ-lVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3893.5999999999999" y="-890.10494752623697"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ez-pI-ZXs">
@@ -276,16 +305,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sju-7h-abL" kind="relationship" relationship="rootViewController" id="MpX-OX-SfP"/>
+                        <segue destination="sju-7h-abL" kind="relationship" relationship="rootViewController" id="XBy-cU-LVD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJR-Y4-upN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1420" y="-1469.4152923538231"/>
+            <point key="canvasLocation" x="-586" y="-1469"/>
         </scene>
     </scenes>
     <resources>
         <image name="corazonvacio.png" width="485" height="485"/>
         <image name="paises.jpeg" width="275" height="183"/>
+        <image name="posEnMapa.png" width="225" height="225"/>
     </resources>
 </document>

@@ -65,9 +65,6 @@ class PaisListStorage
                                 country.languages.append(langName as! String)
                             }
                         }
-                        
-                      
-                     
                     }
                     
                     
@@ -83,13 +80,19 @@ class PaisListStorage
                                 print("currName \(currName)")
                                 country.currencies.append(currName as! String)
                             }
-                           
                         }
                         
                     }
-                    
-                    //country.lat = latlng[0].object(at: 0) as! Int
-                    //country.long = latlng[0].object(at: 1) as! Int
+                   
+                    if(latlng.count > 1){ //hay paises en el api que no devuelven latitud o longitud
+                        let latitud = latlng[0]
+                        let longitud  = latlng[1]
+                        
+                        print (country.name)
+                        print("latlang \(latlng), lat \(latitud), long \(longitud)")
+                        country.lat = latitud as! Double
+                        country.long = longitud as! Double
+                    }
                     
                     self.paises.append(country)
                     

@@ -8,6 +8,7 @@
 
 import UIKit
 import SVGKit
+import CoreData
 
 class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
    
@@ -23,12 +24,10 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     private let banderaListStorage = BanderaListStorage ()
     var esFavorito : Bool = false
-    
     var pais = Pais()
     
-    
-  
-  
+    var favoritos = [NSManagedObject]()
+ 
     /*
      // MARK: - Navigation
      
@@ -38,13 +37,49 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //print("prepareForSegue")
+        if segue.identifier == "segueMapaPais"
+        {
+            if let destinationVC = segue.destination as? MapaPaisViewController {
+                destinationVC.latitud = self.pais.lat
+                destinationVC.longitud = self.pais.long
+                destinationVC.nombrePais = self.pais.name
+            }
+        }
+    }
+    
+    
 
+    //CORE DATA
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        /*
+        //1
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisCoreData")
+        
+        //3
+        do {
+            favoritos = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+ */
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //print("DetallePaisViewController")
+        
         
         self.banderaListStorage.delegateBandera = self
         
@@ -75,7 +110,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
   
             if(lang.count > 0){ // me vienen del parseo algunos valores a linea en blanco que no pinto
                 let bulletPoint: String = "\u{2022}"
-                let fila = bulletPoint + lang + "\n"
+                let fila = bulletPoint + " " +  lang + "\n"
                 txtIdiomas.text?.append(fila)
                 
             }
@@ -124,10 +159,17 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
              imgFavorito.image = UIImage(named: "corazonlleno.png")
             esFavorito = true
         }
-       
-        
         
     }
+    
+    
+    
+    @IBAction func posMapa(_ sender: Any) {
+        
+        performSegue(withIdentifier: "segueMapaPais", sender: self)
+    }
+    
+    
     
     
 

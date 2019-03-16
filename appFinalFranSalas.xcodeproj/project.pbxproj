@@ -16,7 +16,6 @@
 		A127457C223D1AA100701670 /* posEnMapa.png in Resources */ = {isa = PBXBuildFile; fileRef = A127457B223D1AA100701670 /* posEnMapa.png */; };
 		A18F473F222A9F8E00401F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F473E222A9F8E00401F6A /* AppDelegate.swift */; };
 		A18F4744222A9F8E00401F6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18F4742222A9F8E00401F6A /* Main.storyboard */; };
-		A18F4747222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A18F4745222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld */; };
 		A18F4749222A9F9000401F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18F4748222A9F9000401F6A /* Assets.xcassets */; };
 		A18F474C222A9F9000401F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18F474A222A9F9000401F6A /* LaunchScreen.storyboard */; };
 		A18F4757222A9F9000401F6A /* appFinalFranSalasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F4756222A9F9000401F6A /* appFinalFranSalasTests.swift */; };
@@ -24,7 +23,9 @@
 		A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198C0F8222D78890039E350 /* PaisViewController.swift */; };
 		A199E07D222AF940002E894D /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199E07C222AF940002E894D /* Pais.swift */; };
 		A19DF8AF223590D600546AA0 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8AE223590D600546AA0 /* SVGKit.framework */; };
-		A19DF8B1223590E000546AA0 /* Macaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8B0223590E000546AA0 /* Macaw.framework */; };
+		A1A0C9EA223D5A2500312385 /* PaisCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */; };
+		A1A0C9EC223D5C3C00312385 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A0C9EB223D5C3C00312385 /* CoreData.framework */; };
+		A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */; };
 		A1A9599E223C0E6A00A5CEC9 /* fondo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */; };
 		A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */; };
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
@@ -66,7 +67,6 @@
 		A18F473B222A9F8E00401F6A /* appFinalFranSalas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appFinalFranSalas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18F473E222A9F8E00401F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18F4743222A9F8E00401F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A18F4746222A9F8E00401F6A /* appFinalFranSalas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appFinalFranSalas.xcdatamodel; sourceTree = "<group>"; };
 		A18F4748222A9F9000401F6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A18F474B222A9F9000401F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A18F474D222A9F9000401F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +80,9 @@
 		A199E07C222AF940002E894D /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		A19DF8AE223590D600546AA0 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19DF8B0223590E000546AA0 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appFinalFranSalas.xcdatamodel; sourceTree = "<group>"; };
+		A1A0C9EB223D5C3C00312385 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaPaisViewController.swift; sourceTree = "<group>"; };
 		A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo.jpg; sourceTree = "<group>"; };
 		A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisListStorage.swift; sourceTree = "<group>"; };
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19DF8B1223590E000546AA0 /* Macaw.framework in Frameworks */,
+				A1A0C9EC223D5C3C00312385 /* CoreData.framework in Frameworks */,
 				A19DF8AF223590D600546AA0 /* SVGKit.framework in Frameworks */,
 				6E5EA9AE2DF7BE7E11E4BDCC /* Pods_appFinalFranSalas.framework in Frameworks */,
 			);
@@ -177,7 +180,6 @@
 				A18F4748222A9F9000401F6A /* Assets.xcassets */,
 				A18F474A222A9F9000401F6A /* LaunchScreen.storyboard */,
 				A18F474D222A9F9000401F6A /* Info.plist */,
-				A18F4745222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld */,
 			);
 			path = appFinalFranSalas;
 			sourceTree = "<group>";
@@ -203,6 +205,7 @@
 		A1B8CABF222C299B00ECF30A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */,
 				A199E07C222AF940002E894D /* Pais.swift */,
 			);
 			path = Model;
@@ -236,6 +239,7 @@
 				A1C1210822357538008B0289 /* DetallePaisViewController.swift */,
 				A1B8CB10222D32B300ECF30A /* FranViewController.swift */,
 				A198C0F8222D78890039E350 /* PaisViewController.swift */,
+				A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +247,7 @@
 		B6D5FEADA83AE7E9E7A0EE8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1A0C9EB223D5C3C00312385 /* CoreData.framework */,
 				A19DF8B0223590E000546AA0 /* Macaw.framework */,
 				A19DF8AE223590D600546AA0 /* SVGKit.framework */,
 				457B59C04C704A2E52151E20 /* Pods_appFinalFranSalas.framework */,
@@ -497,8 +502,9 @@
 			files = (
 				A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */,
 				A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */,
-				A18F4747222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld in Sources */,
+				A1A0C9EA223D5A2500312385 /* PaisCoreData.xcdatamodeld in Sources */,
 				A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */,
+				A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */,
 				A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */,
 				A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */,
 				A199E07D222AF940002E894D /* Pais.swift in Sources */,
@@ -837,13 +843,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A18F4745222A9F8E00401F6A /* appFinalFranSalas.xcdatamodeld */ = {
+		A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A18F4746222A9F8E00401F6A /* appFinalFranSalas.xcdatamodel */,
+				A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */,
 			);
-			currentVersion = A18F4746222A9F8E00401F6A /* appFinalFranSalas.xcdatamodel */;
-			path = appFinalFranSalas.xcdatamodeld;
+			currentVersion = A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */;
+			name = PaisCoreData.xcdatamodeld;
+			path = ../PaisCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

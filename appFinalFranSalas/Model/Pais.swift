@@ -7,6 +7,7 @@
 //
 import Foundation
 
+
 class Pais{
     
     var name = ""
@@ -18,6 +19,7 @@ class Pais{
     var languages = [""]
     var population = 0
     var flag = ""
+    var esfavorito = false
     var dataFlag = Data()
     
 }
