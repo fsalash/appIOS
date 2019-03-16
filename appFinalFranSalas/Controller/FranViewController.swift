@@ -18,7 +18,8 @@ class FranViewController:  UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-print("franviewcontroller")
+        print("franviewcontroller")
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
         // Do any additional setup after loading the view.
     }
     

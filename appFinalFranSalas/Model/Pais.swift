@@ -11,6 +11,12 @@ class Pais{
     
     var name = ""
     var region = ""
+    var lat = 0.0
+    var long = 0.0
+    var capital = ""
+    var currencies = [""]
+    var languages = [""]
+    var population = 0
     var flag = ""
     var dataFlag = Data()
     

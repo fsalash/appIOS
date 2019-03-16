@@ -11,22 +11,13 @@ import SVGKit
 
 class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
    
-    private  var flag = Data()
-    private let paisListStorage = PaisListStorage ()
-  
-    private let paisDetalle = DetallePaisViewController()
-
-  
     
     @IBOutlet var tableView: UITableView!
     
-    
-    func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
-        
-     //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \
-         self.tableView.reloadData()
-    }
-    
+    private  var flag = Data()
+    private let paisListStorage = PaisListStorage ()
+    private let paisDetalle = DetallePaisViewController()
+
     
     // MARK: - Table view data source
     
@@ -53,19 +44,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       //print("prepareForSegue")
-        if segue.identifier == "segueDetallePais"
-        {
-            let pais = sender as! Pais
-            if let destinationVC = segue.destination as? DetallePaisViewController {
-                //print(pais!.name)
-                //print(destinationVC.lblDetallePais.text)
-                destinationVC.pais = pais
-            }
-        }
-    }
-    
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,26 +58,8 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
-    
-    func callSegueFromCell(myData dataobject: AnyObject) {
-       
-        performSegue(withIdentifier: "segueDetallePais", sender: self)
-    }
-    
-    
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-    }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        print("pelisviewcontroller")
-        // Do any additional setup after loading the view.
-          self.paisListStorage.delegatePais = self
-
-        paisListStorage.getPaises()
     }
     
 
@@ -112,5 +72,56 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("pelisviewcontroller")
+        // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
+        // Do any additional setup after loading the view.
+        self.paisListStorage.delegatePais = self
+        
+        paisListStorage.getPaises()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //print("prepareForSegue")
+        if segue.identifier == "segueDetallePais"
+        {
+            let pais = sender as! Pais
+            if let destinationVC = segue.destination as? DetallePaisViewController {
+                //print(pais!.name)
+                //print(destinationVC.lblDetallePais.text)
+                destinationVC.pais = pais
+            }
+        }
+    }
+    
+    func callSegueFromCell(myData dataobject: AnyObject) {
+        
+        performSegue(withIdentifier: "segueDetallePais", sender: self)
+    }
+    
+    
+    /*
+     // MARK: - Delegate
+     
+     // Se entera de que se ha recibido respuesta desde alamo y se ha creado un nuevo pais que podria mostrar en la tabla
+     }
+     */
+    
+    func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
+        
+        //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \
+        self.tableView.reloadData()
+    }
+    
+   
+    
+    
+   
+    
+    
 
 }
