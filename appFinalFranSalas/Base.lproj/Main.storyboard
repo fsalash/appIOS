@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-PS-Mr7">
-                                <rect key="frame" x="76" y="145" width="246" height="58"/>
+                                <rect key="frame" x="64" y="213" width="246" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.14213992950000001" green="0.34064876910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Obtener Paises"/>
@@ -30,29 +30,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-Hj-Ohv">
-                                <rect key="frame" x="125" y="367" width="148" height="58"/>
+                                <rect key="frame" x="113" y="351" width="148" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.14213992950000001" green="0.34064876910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Favoritos"/>
+                                <connections>
+                                    <action selector="verFavoritos:" destination="sju-7h-abL" eventType="touchUpInside" id="ERJ-xf-SSm"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paises.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="sly-SN-Tj5">
-                                <rect key="frame" x="139" y="202" width="112" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corazonvacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-Bh-KIn">
-                                <rect key="frame" x="177" y="433" width="44" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95578402280807495" green="0.91406291723251343" blue="0.82995027303695679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lL4-2m-zUl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="zkL-ii-jGC"/>
                     <navigationItem key="navigationItem" id="fH1-2d-OFb"/>
                     <connections>
                         <segue destination="SMV-KC-sjI" kind="show" identifier="seguePaises" id="YOm-um-yBK"/>
+                        <segue destination="DbC-Ge-Iwz" kind="show" identifier="segueFavoritos" id="zAi-O6-K8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dL-ql-NzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,6 +88,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="flag" destination="hVB-i1-8Lf" id="0eo-Gm-SVW"/>
                                     <outlet property="lblTitulo" destination="w3c-yW-DWC" id="yxa-C8-lKn"/>
@@ -262,6 +259,34 @@
             </objects>
             <point key="canvasLocation" x="3381.5999999999999" y="-1755.4722638680662"/>
         </scene>
+        <!--Favoritos Table View Controller-->
+        <scene sceneID="hJk-77-XR2">
+            <objects>
+                <tableViewController id="DbC-Ge-Iwz" customClass="FavoritosTableViewController" customModule="appFinalFranSalas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b0N-24-OBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="C9D-BK-23X">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C9D-BK-23X" id="VfI-YU-FEP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DbC-Ge-Iwz" id="hQ9-Jz-ifO"/>
+                            <outlet property="delegate" destination="DbC-Ge-Iwz" id="1DO-Cm-4gt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yd-QP-B1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449" y="-931"/>
+        </scene>
         <!--Mapa Pais View Controller-->
         <scene sceneID="rnT-cX-f0R">
             <objects>
@@ -315,7 +340,6 @@
     </scenes>
     <resources>
         <image name="corazonvacio.png" width="485" height="485"/>
-        <image name="paises.jpeg" width="275" height="183"/>
         <image name="posEnMapa.png" width="225" height="225"/>
     </resources>
 </document>

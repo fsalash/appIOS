@@ -51,28 +51,6 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     }
     
     
-
-    //CORE DATA
-     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        /*
-        //1
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisCoreData")
-        
-        //3
-        do {
-            favoritos = try managedContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
- */
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,15 +131,69 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
             print ("eliminar como favorito")
             imgFavorito.image = UIImage(named: "corazonvacio.png")
             esFavorito = false
+            deleteFavorito("prueba")
         }
         else{
             print ("meter como favorito")
              imgFavorito.image = UIImage(named: "corazonlleno.png")
             esFavorito = true
+            saveFavorito("prueba")
         }
         
     }
     
+    func saveFavorito(_ name: String) {
+        //1
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let entity =  NSEntityDescription.entity(forEntityName: "Pais2",                                   in:managedContext)!
+        
+        let pais = NSManagedObject(entity: entity,
+                                   insertInto: managedContext)
+        
+        //3
+        pais.setValue(name, forKey: "nombre")
+        
+        //4
+        do {
+            try managedContext.save()
+            //5
+            favoritos.append(pais)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    func deleteFavorito(_ name: String) {
+        //1
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let entity =  NSEntityDescription.entity(forEntityName: "Pais2",
+                                                 in:managedContext)!
+        
+        let pais = NSManagedObject(entity: entity,
+                                   insertInto: managedContext)
+        
+        //3
+        pais.setValue(name, forKey: "nombre")
+        
+        //4
+        do {
+            try managedContext.delete(pais)
+            
+        } catch let error as NSError  {
+            print("Could not delete \(error), \(error.userInfo)")
+        }
+    }
+
     
     
     @IBAction func posMapa(_ sender: Any) {

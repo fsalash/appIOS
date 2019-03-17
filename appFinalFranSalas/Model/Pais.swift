@@ -5,6 +5,8 @@
 //  Created by Fran on 2/3/19.
 //  Copyright © 2019 Fran. All rights reserved.
 //
+
+//Este era mi pais original antes de usar CoreData. Lo guardo como reliquia de codigo :-) por si algo va mal
 import Foundation
 
 

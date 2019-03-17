@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -355,7 +355,6 @@
 		C39E172BE35D0A5BD8492203E2E74B34 /* AlamofireImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E899E7A125FE0B4412B732B8D5D38FA /* AlamofireImage-dummy.m */; };
 		C3F2A1D3B414EABC6AA113C7731B1DDE /* Macaw-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB2F6B040F77EF10B831D02E1C0863 /* Macaw-dummy.m */; };
 		C427C34A6E4964F1B3ECD5D7932FAD79 /* MDisplayLink_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBA33C2C5F42E716851B8A3A155D2D /* MDisplayLink_macOS.swift */; };
-		C44EE9312091699A4C14D8F57E2849D3 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7947B0B536F25905A2812E9B320EB0AD /* SWXMLHash.framework */; };
 		C506803A61B70AFB626DEB975981F554 /* AnimationImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1526F97C63D67EF9C5B9608D094413 /* AnimationImpl.swift */; };
 		C522E5CCC21ED4B4E4DAFE0EF5976534 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0BB57E6A96EEDC1AEEB9F1700E4A8 /* AFIError.swift */; };
 		C594A4BD21B5D5EBDDAFB82A071D6476 /* SVGKExporterUIImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 228D5A0C039F45E9F86883BFD6C0A7C2 /* SVGKExporterUIImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -660,7 +659,7 @@
 		3027890807D7343FF4F16FEFE082726D /* SVGDescriptionElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGDescriptionElement.h; path = "Source/DOM classes/Unported or Partial DOM/SVGDescriptionElement.h"; sourceTree = "<group>"; };
 		308C84CDE2D932288A3EBA3874FE95CF /* CGFloat+Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Double.swift"; path = "Source/thirdparty/CGFloat+Double.swift"; sourceTree = "<group>"; };
 		309076D6FEAE47297125A8455E350286 /* SVGKSourceLocalFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGKSourceLocalFile.h; path = Source/Sources/SVGKSourceLocalFile.h; sourceTree = "<group>"; };
-		309313944444975F121DA6EFFBB76766 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		309313944444975F121DA6EFFBB76766 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BF882911BBCED158654EE8D3ECF8BF /* TransformHashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformHashable.swift; path = Source/animation/types/animation_generators/Cache/TransformHashable.swift; sourceTree = "<group>"; };
 		3151878BEBAC2F1D582698F09D387786 /* Polygon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Polygon.swift; path = Source/model/geom2d/Polygon.swift; sourceTree = "<group>"; };
 		315D8BAB902C3930B5FA94954F831683 /* CharacterData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CharacterData.m; path = "Source/DOM classes/Core DOM/CharacterData.m"; sourceTree = "<group>"; };
@@ -678,7 +677,7 @@
 		3732566940251DA0DE8122A46B3572A4 /* AlamofireImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-prefix.pch"; sourceTree = "<group>"; };
 		3743D7AD3D389EABA91E8C3E196C4687 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
 		374C2AEF7CD6A2A292492BA1CE46263E /* OpacityAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpacityAnimation.swift; path = Source/animation/types/OpacityAnimation.swift; sourceTree = "<group>"; };
-		375383FB298798AD875CE34093646D9C /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		375383FB298798AD875CE34093646D9C /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3883841A3FA38F7DC888BE854246CA4E /* Node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Node.h; path = "Source/DOM classes/Core DOM/Node.h"; sourceTree = "<group>"; };
 		39E6B680C014ED09A89E70AE402F5BF4 /* CAShapeLayerWithClipRender.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CAShapeLayerWithClipRender.h; path = "Source/QuartzCore additions/CAShapeLayerWithClipRender.h"; sourceTree = "<group>"; };
 		3A33EEDE3C6DB98BA4F7A7397D5F76A6 /* BaseClassForAllSVGBasicShapes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseClassForAllSVGBasicShapes.m; path = "Source/DOM classes/Unported or Partial DOM/BaseClassForAllSVGBasicShapes.m"; sourceTree = "<group>"; };
@@ -697,7 +696,7 @@
 		4222E546B8CD5CF7D16C9F604368D917 /* MCAShapeLayerLineCap_iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCAShapeLayerLineCap_iOS.swift; path = Source/MCAShapeLayerLineCap_iOS.swift; sourceTree = "<group>"; };
 		430A9D7409125E9B902FC514E0A9D909 /* SVGElementInstanceList_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGElementInstanceList_Internal.h; path = "Source/DOM classes/SVG-DOM/SVGElementInstanceList_Internal.h"; sourceTree = "<group>"; };
 		438ECCB1BFDC79AB1DFAFB1573D76521 /* SVGHelperUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGHelperUtilities.h; path = "Source/DOM classes/SVG-DOM/SVGHelperUtilities.h"; sourceTree = "<group>"; };
-		43AC0560B91F1301CA19E8F06AE9948B /* Pods_appFinalFranSalasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_appFinalFranSalasUITests.framework; path = "Pods-appFinalFranSalasUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43AC0560B91F1301CA19E8F06AE9948B /* Pods_appFinalFranSalasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFinalFranSalasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FC40B8322080815AFA4E531FBB1747 /* Pods-appFinalFranSalasUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-appFinalFranSalasUITests-dummy.m"; sourceTree = "<group>"; };
 		444F34ADC7B80846A763F2EE5397EF8D /* StyleSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StyleSheet.h; path = "Source/DOM classes/Core DOM/StyleSheet.h"; sourceTree = "<group>"; };
 		4476229A0C2E44FCAD4F26BE1DEC7E40 /* Node.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = "Source/DOM classes/Core DOM/Node.m"; sourceTree = "<group>"; };
@@ -734,7 +733,7 @@
 		54A8693D868F730AC4A4DCAF70E3C8B6 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
 		558BC58C0128ACAAFFF37FE1CFF8B9EE /* SVGImageElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGImageElement.h; path = "Source/DOM classes/Unported or Partial DOM/SVGImageElement.h"; sourceTree = "<group>"; };
 		55B16FE81624E53358BF7DE6F6D0232E /* DDFileLogger+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Internal.h"; path = "Classes/DDFileLogger+Internal.h"; sourceTree = "<group>"; };
-		56884465D80AD42EA64C3383DDF43634 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Macaw.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56884465D80AD42EA64C3383DDF43634 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AC66106E4BCCFCF3CE61C4C794616E /* SVGKSourceURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGKSourceURL.h; path = Source/Sources/SVGKSourceURL.h; sourceTree = "<group>"; };
 		56BC5852A73AB93A0B2B8A0DEC574020 /* AlamofireImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlamofireImage-Info.plist"; sourceTree = "<group>"; };
 		580AD206EA792F7867545C9090F4060A /* MorphingAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MorphingAnimation.swift; path = Source/animation/types/MorphingAnimation.swift; sourceTree = "<group>"; };
@@ -778,7 +777,7 @@
 		6CD581619848B91452A3924956DBB9F5 /* SVGElementInstanceList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGElementInstanceList.h; path = "Source/DOM classes/SVG-DOM/SVGElementInstanceList.h"; sourceTree = "<group>"; };
 		6D4C1061DD61B744DFA86F2C5276CBE6 /* SVGUnitTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGUnitTypes.h; path = "Source/DOM classes/SVG-DOM/SVGUnitTypes.h"; sourceTree = "<group>"; };
 		6D581CBA767FED54848794C13F5794D2 /* GroupDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupDisposable.swift; path = Source/bindings/GroupDisposable.swift; sourceTree = "<group>"; };
-		6F27859D53D7B1776D8E0053F2E0E66A /* Pods_appFinalFranSalas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_appFinalFranSalas.framework; path = "Pods-appFinalFranSalas.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F27859D53D7B1776D8E0053F2E0E66A /* Pods_appFinalFranSalas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFinalFranSalas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF24CADAC833419C66D722C5032D86E /* DDFileLogger+Buffering.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDFileLogger+Buffering.m"; path = "Classes/Extensions/DDFileLogger+Buffering.m"; sourceTree = "<group>"; };
 		706B1BC3805D06F875E593840487E83F /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
 		70A60C97E8C56047D6AF70F56D8AE7ED /* Macaw-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Macaw-umbrella.h"; sourceTree = "<group>"; };
@@ -793,7 +792,6 @@
 		78A4305DBD3950811F07214A8027BB47 /* MCAMediaTimingFunctionName_macOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCAMediaTimingFunctionName_macOS.swift; path = Source/MCAMediaTimingFunctionName_macOS.swift; sourceTree = "<group>"; };
 		78D0861296D0C9E3310ADFB55E5C7C92 /* Macaw.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Macaw.xcconfig; sourceTree = "<group>"; };
 		792620E271D6A75EC5F1F2B8608DBC36 /* SceneUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneUtils.swift; path = Source/model/scene/SceneUtils.swift; sourceTree = "<group>"; };
-		7947B0B536F25905A2812E9B320EB0AD /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C1AEC3594B189BA15621D9524148F5 /* TinySVGTextAreaElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TinySVGTextAreaElement.m; path = "Source/DOM classes/Unported or Partial DOM/TinySVGTextAreaElement.m"; sourceTree = "<group>"; };
 		7B066C6073B4165BA82E1F05FD9B90A7 /* SVGConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SVGConstants.swift; path = Source/svg/SVGConstants.swift; sourceTree = "<group>"; };
 		7BD5A33AAC502D647592DFF72F9F2DAC /* BaseClassForAllSVGBasicShapes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseClassForAllSVGBasicShapes.h; path = "Source/DOM classes/Unported or Partial DOM/BaseClassForAllSVGBasicShapes.h"; sourceTree = "<group>"; };
@@ -865,7 +863,7 @@
 		9B5E8EBFAFC1CA96037E21C9CF8E3C8E /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		9B78AB70597799F090842B407C112998 /* SVGAnimatedPreserveAspectRatio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAnimatedPreserveAspectRatio.h; path = "Source/DOM classes/SVG-DOM/SVGAnimatedPreserveAspectRatio.h"; sourceTree = "<group>"; };
 		9CDB60FBAEE453BD06FE41B8224738E7 /* SVGSVGElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGSVGElement.h; path = "Source/DOM classes/Unported or Partial DOM/SVGSVGElement.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E21AB2240FF1C7A2A952133AAFA8491 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
 		9E6A5E3A7872B67C2889464B59F8438A /* CSSValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSValue.m; path = "Source/DOM classes/Core DOM/CSSValue.m"; sourceTree = "<group>"; };
 		9EB01C5F4555D03F0CA628B8174AE33B /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
@@ -899,7 +897,7 @@
 		ADF51A590EB733864CE633D0A5218D32 /* ShapeInterpolation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeInterpolation.swift; path = Source/animation/layer_animation/Extensions/ShapeInterpolation.swift; sourceTree = "<group>"; };
 		AE6874D632E5A4CCC1B10A58B88B6D31 /* PathBounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathBounds.swift; path = Source/animation/layer_animation/PathBounds.swift; sourceTree = "<group>"; };
 		AE6C834E93EAD682BA12EC537462F95E /* DDOSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDOSLogger.m; path = Classes/DDOSLogger.m; sourceTree = "<group>"; };
-		AEB13B0896D8F6D1890BE3A1025122C3 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB13B0896D8F6D1890BE3A1025122C3 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF4E416334CA97EB8951613D4E18037 /* SVGKParseResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGKParseResult.m; path = Source/Parsers/SVGKParseResult.m; sourceTree = "<group>"; };
 		AF3E3DFF4013DEBBCFFF60F5ED9F919A /* Gradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = Source/model/draw/Gradient.swift; sourceTree = "<group>"; };
 		AFD27B7A47975CD24C1354F7464ED837 /* SVGSwitchElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGSwitchElement.m; path = "Source/DOM classes/Unported or Partial DOM/SVGSwitchElement.m"; sourceTree = "<group>"; };
@@ -950,7 +948,7 @@
 		C2624AB8495F825035F0FC98BA388698 /* SVGKParserDefsAndUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGKParserDefsAndUse.h; path = "Source/Parsers/Parser Extensions/SVGKParserDefsAndUse.h"; sourceTree = "<group>"; };
 		C3F62E35AFCF60467E83EAFC7E4E48B1 /* Baseline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Baseline.swift; path = Source/model/draw/Baseline.swift; sourceTree = "<group>"; };
 		C408B2484585C171406CD7942B0504E8 /* Comment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = "Source/DOM classes/Core DOM/Comment.h"; sourceTree = "<group>"; };
-		C41F7DD7F9C87E52BA6D9C28E120453B /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVGKit.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41F7DD7F9C87E52BA6D9C28E120453B /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46C88293CC91D2CCE92F825E3C9E6D9 /* PathSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathSegment.swift; path = Source/model/geom2d/PathSegment.swift; sourceTree = "<group>"; };
 		C4AB9AA61C31D954D72F4AA142B23B7C /* MoveTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveTo.swift; path = Source/model/geom2d/MoveTo.swift; sourceTree = "<group>"; };
 		C4C3234D7970FA81AB7FB251F47B363A /* EntityReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EntityReference.h; path = "Source/DOM classes/Core DOM/EntityReference.h"; sourceTree = "<group>"; };
@@ -961,7 +959,7 @@
 		C526AEE481D578EC8730A4C2AECEA9A9 /* Pods-appFinalFranSalasUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-appFinalFranSalasUITests-umbrella.h"; sourceTree = "<group>"; };
 		C63D8CC5B052332BAD0776A1248A14C1 /* SVGKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVGKit-prefix.pch"; sourceTree = "<group>"; };
 		C750939A100D1E56BE0989A41454047E /* DocumentStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DocumentStyle.h; path = "Source/DOM classes/Core DOM/DocumentStyle.h"; sourceTree = "<group>"; };
-		C7BDDDC5E98E5C998FE0E1375A667643 /* Pods_appFinalFranSalasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_appFinalFranSalasTests.framework; path = "Pods-appFinalFranSalasTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7BDDDC5E98E5C998FE0E1375A667643 /* Pods_appFinalFranSalasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFinalFranSalasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88BFBE78E950838D6363E38DB0F8118 /* Common_macOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common_macOS.swift; path = Source/platform/macOS/Common_macOS.swift; sourceTree = "<group>"; };
 		C8F7BD95D8E0701EE1404130D91A1F47 /* SVGPreserveAspectRatio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGPreserveAspectRatio.h; path = "Source/DOM classes/SVG-DOM/SVGPreserveAspectRatio.h"; sourceTree = "<group>"; };
 		C954119C7C11284A4039BEBF8736FBAD /* ImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageRenderer.swift; path = Source/render/ImageRenderer.swift; sourceTree = "<group>"; };
@@ -1056,7 +1054,7 @@
 		FA1863A0F3D3BEC21B8FDDAA4EC04AD9 /* GaussianBlur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaussianBlur.swift; path = Source/model/draw/GaussianBlur.swift; sourceTree = "<group>"; };
 		FB114C5D4CAA29E2B1A3DA6273791029 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		FB58C31684857FE440665F27D517B775 /* SVGRectElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGRectElement.h; path = "Source/DOM classes/Unported or Partial DOM/SVGRectElement.h"; sourceTree = "<group>"; };
-		FB75B529DF7D5F8FB6824EA5CC4368DE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB75B529DF7D5F8FB6824EA5CC4368DE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB75E3AC2C58A534618A8542EF9839DE /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Source/model/scene/Node.swift; sourceTree = "<group>"; };
 		FBCC60397C4974B0C3F6DCE2249B8CBF /* DDOSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDOSLogger.h; path = Classes/DDOSLogger.h; sourceTree = "<group>"; };
 		FC17DF67925854910BF94FC0F4361C8A /* SVGKSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGKSource.m; path = Source/SVGKSource.m; sourceTree = "<group>"; };
@@ -1090,7 +1088,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC274379524EE253ADDACDE6F2A9F4AE /* Foundation.framework in Frameworks */,
-				C44EE9312091699A4C14D8F57E2849D3 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,7 +1193,6 @@
 			children = (
 				BEF9C8FEB077EBC6866F03565B022C66 /* Alamofire.framework */,
 				DC9999E47C18EDF34DD502263F17AB2B /* CocoaLumberjack.framework */,
-				7947B0B536F25905A2812E9B320EB0AD /* SWXMLHash.framework */,
 				5E007E557A3B9DEB6BE7677C02A5FE01 /* iOS */,
 			);
 			name = Frameworks;
@@ -1210,7 +1206,6 @@
 				6311A80CD79620891EC6469066E27A68 /* SWXMLHash+TypeConversion.swift */,
 				7669D598C555EB3FD4603C809F2EAC60 /* Support Files */,
 			);
-			name = SWXMLHash;
 			path = SWXMLHash;
 			sourceTree = "<group>";
 		};
@@ -1478,7 +1473,6 @@
 				79C1AEC3594B189BA15621D9524148F5 /* TinySVGTextAreaElement.m */,
 				BE9E1BE6F1D15217EA3981B3A573F252 /* Support Files */,
 			);
-			name = SVGKit;
 			path = SVGKit;
 			sourceTree = "<group>";
 		};
@@ -1504,7 +1498,6 @@
 				404925BCD490CDF7210E25B3F29939A4 /* Validation.swift */,
 				BE2D07E722BA7E196D7EA4F233B0C1A6 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1702,7 +1695,6 @@
 				BD72CCB6B5251C5543F0DD9926AEA1E7 /* Variable.swift */,
 				077C4E8F7E38DFF99CBAA75A6B74A0E9 /* Support Files */,
 			);
-			name = Macaw;
 			path = Macaw;
 			sourceTree = "<group>";
 		};
@@ -1723,7 +1715,6 @@
 				FEFD799861F35F7CA9DA65CA4C134E12 /* Core */,
 				724A671E61E29169994269489E3F9C21 /* Support Files */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -1758,7 +1749,6 @@
 				98D218A6B331BD5E976D819F4BF0717B /* UIImageView+AlamofireImage.swift */,
 				FB13B76E0F1C0858E4F4FDEC751A694D /* Support Files */,
 			);
-			name = AlamofireImage;
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
@@ -2793,11 +2783,7 @@
 				INFOPLIST_FILE = "Target Support Files/Macaw/Macaw-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Macaw/Macaw.modulemap";
 				PRODUCT_MODULE_NAME = Macaw;
 				PRODUCT_NAME = Macaw;
@@ -2828,11 +2814,7 @@
 				INFOPLIST_FILE = "Target Support Files/SVGKit/SVGKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVGKit/SVGKit.modulemap";
 				PRODUCT_MODULE_NAME = SVGKit;
 				PRODUCT_NAME = SVGKit;
@@ -2863,11 +2845,7 @@
 				INFOPLIST_FILE = "Target Support Files/Macaw/Macaw-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Macaw/Macaw.modulemap";
 				PRODUCT_MODULE_NAME = Macaw;
 				PRODUCT_NAME = Macaw;
@@ -2899,11 +2877,7 @@
 				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
 				PRODUCT_MODULE_NAME = CocoaLumberjack;
 				PRODUCT_NAME = CocoaLumberjack;
@@ -2970,8 +2944,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -2995,11 +2968,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3097,11 +3066,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3135,11 +3100,7 @@
 				INFOPLIST_FILE = "Target Support Files/SWXMLHash/SWXMLHash-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
 				PRODUCT_MODULE_NAME = SWXMLHash;
 				PRODUCT_NAME = SWXMLHash;
@@ -3172,11 +3133,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3210,11 +3167,7 @@
 				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
 				PRODUCT_MODULE_NAME = CocoaLumberjack;
 				PRODUCT_NAME = CocoaLumberjack;
@@ -3246,11 +3199,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -3283,11 +3232,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3320,11 +3265,7 @@
 				INFOPLIST_FILE = "Target Support Files/SVGKit/SVGKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVGKit/SVGKit.modulemap";
 				PRODUCT_MODULE_NAME = SVGKit;
 				PRODUCT_NAME = SVGKit;
@@ -3356,11 +3297,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -3391,11 +3328,7 @@
 				INFOPLIST_FILE = "Target Support Files/AlamofireImage/AlamofireImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
 				PRODUCT_MODULE_NAME = AlamofireImage;
 				PRODUCT_NAME = AlamofireImage;
@@ -3426,11 +3359,7 @@
 				INFOPLIST_FILE = "Target Support Files/AlamofireImage/AlamofireImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
 				PRODUCT_MODULE_NAME = AlamofireImage;
 				PRODUCT_NAME = AlamofireImage;
@@ -3463,11 +3392,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3500,11 +3425,7 @@
 				INFOPLIST_FILE = "Target Support Files/SWXMLHash/SWXMLHash-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
 				PRODUCT_MODULE_NAME = SWXMLHash;
 				PRODUCT_NAME = SWXMLHash;
@@ -3536,11 +3457,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests.modulemap";
 				OTHER_LDFLAGS = "";

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,9 +23,10 @@
 		A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198C0F8222D78890039E350 /* PaisViewController.swift */; };
 		A199E07D222AF940002E894D /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199E07C222AF940002E894D /* Pais.swift */; };
 		A19DF8AF223590D600546AA0 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8AE223590D600546AA0 /* SVGKit.framework */; };
-		A1A0C9EA223D5A2500312385 /* PaisCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */; };
 		A1A0C9EC223D5C3C00312385 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A0C9EB223D5C3C00312385 /* CoreData.framework */; };
 		A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */; };
+		A1A0C9F0223D6FE800312385 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */; };
+		A1A0C9F3223D73D200312385 /* appFinalFranSalas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9F1223D73D200312385 /* appFinalFranSalas.xcdatamodeld */; };
 		A1A9599E223C0E6A00A5CEC9 /* fondo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */; };
 		A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */; };
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
@@ -80,9 +81,10 @@
 		A199E07C222AF940002E894D /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		A19DF8AE223590D600546AA0 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19DF8B0223590E000546AA0 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appFinalFranSalas.xcdatamodel; sourceTree = "<group>"; };
 		A1A0C9EB223D5C3C00312385 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaPaisViewController.swift; sourceTree = "<group>"; };
+		A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
+		A1A0C9F2223D73D200312385 /* PaisCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaisCoreData.xcdatamodel; sourceTree = "<group>"; };
 		A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo.jpg; sourceTree = "<group>"; };
 		A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisListStorage.swift; sourceTree = "<group>"; };
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
@@ -205,7 +207,7 @@
 		A1B8CABF222C299B00ECF30A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */,
+				A1A0C9F1223D73D200312385 /* appFinalFranSalas.xcdatamodeld */,
 				A199E07C222AF940002E894D /* Pais.swift */,
 			);
 			path = Model;
@@ -238,6 +240,7 @@
 			children = (
 				A1C1210822357538008B0289 /* DetallePaisViewController.swift */,
 				A1B8CB10222D32B300ECF30A /* FranViewController.swift */,
+				A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */,
 				A198C0F8222D78890039E350 /* PaisViewController.swift */,
 				A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */,
 			);
@@ -330,19 +333,22 @@
 					A18F473A222A9F8E00401F6A = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
 					};
 					A18F4751222A9F9000401F6A = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = A18F473A222A9F8E00401F6A;
 					};
 					A18F475C222A9F9000401F6A = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = A18F473A222A9F8E00401F6A;
 					};
 				};
 			};
 			buildConfigurationList = A18F4736222A9F8E00401F6A /* Build configuration list for PBXProject "appFinalFranSalas" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -502,12 +508,13 @@
 			files = (
 				A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */,
 				A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */,
-				A1A0C9EA223D5A2500312385 /* PaisCoreData.xcdatamodeld in Sources */,
+				A1A0C9F0223D6FE800312385 /* FavoritosTableViewController.swift in Sources */,
 				A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */,
 				A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */,
 				A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */,
 				A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */,
 				A199E07D222AF940002E894D /* Pais.swift in Sources */,
+				A1A0C9F3223D73D200312385 /* appFinalFranSalas.xcdatamodeld in Sources */,
 				A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */,
 				A18F473F222A9F8E00401F6A /* AppDelegate.swift in Sources */,
 			);
@@ -674,8 +681,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -688,10 +694,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -708,10 +711,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -727,11 +727,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalasTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -748,11 +744,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalasTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -768,11 +760,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalasUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -788,11 +776,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = appFinalFranSalasUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -843,14 +827,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A1A0C9E8223D5A2400312385 /* PaisCoreData.xcdatamodeld */ = {
+		A1A0C9F1223D73D200312385 /* appFinalFranSalas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */,
+				A1A0C9F2223D73D200312385 /* PaisCoreData.xcdatamodel */,
 			);
-			currentVersion = A1A0C9E9223D5A2400312385 /* appFinalFranSalas.xcdatamodel */;
-			name = PaisCoreData.xcdatamodeld;
-			path = ../PaisCoreData.xcdatamodeld;
+			currentVersion = A1A0C9F2223D73D200312385 /* PaisCoreData.xcdatamodel */;
+			name = appFinalFranSalas.xcdatamodeld;
+			path = ../../appFinalFranSalas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
