@@ -11,8 +11,8 @@ import SVGKit
 import CoreData
 
 class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
-   
- 
+  
+  
     @IBOutlet weak var txtCapital: UILabel!
     @IBOutlet weak var txtRegion: UILabel!
     @IBOutlet weak var txtIdiomas: UILabel!
@@ -28,6 +28,38 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     var favoritos = [NSManagedObject]()
  
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+   
+        self.banderaListStorage.delegateBandera = self
+      
+        if(pais.dataFlag.count > 0){
+            //me han llamado desde favoritos y ya tengo toda la info del pais--> Monto la vista
+            montaVista(country: pais)
+            esFavorito = true
+        }
+        else{
+           self.banderaListStorage.getBandera(pais: pais)
+        }
+        
+        
+    }
+    
+    func prueba(){
+        print("prueba")
+    }
+
+    
+    //CORE DATA
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+       recargaContextoFavoritos()
+        
+        
+    }
+    
     /*
      // MARK: - Navigation
      
@@ -50,23 +82,11 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         }
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        //print("DetallePaisViewController")
+    @IBAction func posMapa(_ sender: Any) {
         
-        
-        self.banderaListStorage.delegateBandera = self
-        
-        self.banderaListStorage.getBandera(pais: pais)
-      
-        
+        performSegue(withIdentifier: "segueMapaPais", sender: self)
     }
-    
-    
+   
     /*
      // MARK: - Delegate
      
@@ -77,15 +97,22 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     func banderaStorage(_: BanderaListStorage, banderaLista country: Pais) {
         
         
+        montaVista(country:country)
+        
+    }
+    
+
+    func montaVista(country: Pais){
+        
         let imagenSVG = SVGKFastImageView(svgkImage: SVGKImage(data: country.dataFlag))
         
         imgBanderaPais.image = imagenSVG?.image.uiImage
-        lblDetallePais.text = pais.name 
+        lblDetallePais.text = pais.name
         txtCapital.text = pais.capital
         txtRegion.text = pais.region
         
         for lang in pais.languages{
-  
+            
             if(lang.count > 0){ // me vienen del parseo algunos valores a linea en blanco que no pinto
                 let bulletPoint: String = "\u{2022}"
                 let fila = bulletPoint + " " +  lang + "\n"
@@ -94,7 +121,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
             }
             
         }
-       
+        
         for curr in pais.currencies{
             
             if(curr.count > 0){ // me vienen del parseo algunos valores a linea en blanco que no pinto
@@ -108,14 +135,52 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         
         
         txtPoblacion.text   = String(pais.population)
-       
- 
-        //por defecto tiene puesto el corazon vacio en el storyBoard
-        if (esFavorito){
-            imgFavorito.image = UIImage(named: "corazonlleno.png")
-        }
-       
         
+        
+        //por defecto tiene puesto el corazon vacio en el storyBoard
+        if (esFavorito(nombrePais : pais.name)){
+            imgFavorito.image = UIImage(named: "corazonlleno.png")
+            pais.esfavorito = true
+            esFavorito = true
+        }
+        else{
+            imgFavorito.image = UIImage(named: "corazonvacio.png")
+            pais.esfavorito = false
+            esFavorito = false
+        }
+        
+    }
+    
+    func esFavorito (nombrePais : String) -> Bool{
+    
+        // Do any additional setup after loading the view.
+        //print("DetallePaisViewController")
+    
+        //Me traigo los favoritos para saber si debo pintar el corazon lleno o vacio
+    
+        //1
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+        let managedContext = appDelegate.managedObjectContext
+    
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisFavorito")
+    
+        //3
+        do {
+            let favoritos = try managedContext.fetch(fetchRequest)
+            
+            for p in favoritos {
+                
+                if p.value(forKey: "nombre") as! String == nombrePais{
+                    return true
+                }
+            }
+        } catch let error as NSError {
+        print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
+        return false
     }
     
     
@@ -131,18 +196,19 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
             print ("eliminar como favorito")
             imgFavorito.image = UIImage(named: "corazonvacio.png")
             esFavorito = false
-            deleteFavorito("prueba")
+            deleteFavorito(pais)
+            
         }
         else{
             print ("meter como favorito")
              imgFavorito.image = UIImage(named: "corazonlleno.png")
             esFavorito = true
-            saveFavorito("prueba")
-        }
+            saveFavorito(pais)
+           }
         
     }
     
-    func saveFavorito(_ name: String) {
+    func saveFavorito(_ objPais: Pais) {
         //1
         let appDelegate =
             UIApplication.shared.delegate as! AppDelegate
@@ -150,63 +216,96 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         let managedContext = appDelegate.managedObjectContext
         
         //2
-        let entity =  NSEntityDescription.entity(forEntityName: "Pais2",                                   in:managedContext)!
+        let entity =  NSEntityDescription.entity(forEntityName: "PaisFavorito",                                   in:managedContext)!
         
         let pais = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
         
         //3
-        pais.setValue(name, forKey: "nombre")
+        pais.setValue(objPais.name, forKey: "nombre")
+        pais.setValue(objPais.region, forKey: "region")
+        pais.setValue(objPais.capital, forKey: "capital")
+        pais.setValue(objPais.currencies, forKey: "monedas")
+        pais.setValue(objPais.dataFlag, forKey: "dataFlag")
+        pais.setValue(objPais.population, forKey: "poblacion")
+        pais.setValue(objPais.languages, forKey: "idiomas")
+        pais.setValue(objPais.lat, forKey: "latitud")
+        pais.setValue(objPais.long, forKey: "longitud")
         
         //4
         do {
             try managedContext.save()
             //5
-            favoritos.append(pais)
+            esFavorito = true
+            muestraMensaje(msgAlerta : "Pais guardado como favorito correctamente")
         } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
+            print("Error guardando favorito \(error), \(error.userInfo)")
         }
     }
     
-    func deleteFavorito(_ name: String) {
-        //1
+    
+    func deleteFavorito(_ objPais: Pais) {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PaisFavorito")
+    
+        fetchRequest.predicate = NSPredicate(format: "nombre = %@", objPais.name)
+
         let appDelegate =
             UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        //2
-        let entity =  NSEntityDescription.entity(forEntityName: "Pais2",
-                                                 in:managedContext)!
+        do{
+            let query = try managedContext.fetch(fetchRequest)
+            let paisFavoritoABorrar = query[0] as! NSManagedObject
+            managedContext.delete(paisFavoritoABorrar)
+            try managedContext.save()
+            
+            //llamo al delegado para que a la vuelta a la tabla de favoritos esté recargada 
+          // self.favoritosListStorage.favoritoBorrado()
+            
+        }catch let error as NSError  {
+            print("Error borrando pais favorito \(error), \(error.userInfo)")
+        }
+            
+
+        muestraMensaje(msgAlerta : "Pais eliminado de favoritos correctamente")
+        esFavorito = false
         
-        let pais = NSManagedObject(entity: entity,
-                                   insertInto: managedContext)
+        recargaContextoFavoritos()
+        
+    }
+    
+    func recargaContextoFavoritos(){
+        
+        //1
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisFavorito")
         
         //3
-        pais.setValue(name, forKey: "nombre")
-        
-        //4
         do {
-            try managedContext.delete(pais)
-            
-        } catch let error as NSError  {
-            print("Could not delete \(error), \(error.userInfo)")
+            favoritos = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
         }
-    }
-
-    
-    
-    @IBAction func posMapa(_ sender: Any) {
         
-        performSegue(withIdentifier: "segueMapaPais", sender: self)
+    }
+
+    func muestraMensaje(msgAlerta : String){
+        
+        let alert = UIAlertController(title: msgAlerta, message: "Pulse aceptar para continuar", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
-    
-    
-    
 
-    
-   
 }
+
 
 

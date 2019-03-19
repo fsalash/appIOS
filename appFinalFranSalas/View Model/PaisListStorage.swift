@@ -61,7 +61,6 @@ class PaisListStorage
                         }
                         else{
                               if(langName as! String).count > 0{
-                                print("langName \(langName)")
                                 country.languages.append(langName as! String)
                             }
                         }
@@ -77,7 +76,6 @@ class PaisListStorage
                         }
                         else{
                             if(currName as! String).count > 0{
-                                print("currName \(currName)")
                                 country.currencies.append(currName as! String)
                             }
                         }
@@ -88,8 +86,6 @@ class PaisListStorage
                         let latitud = latlng[0]
                         let longitud  = latlng[1]
                         
-                        print (country.name)
-                        print("latlang \(latlng), lat \(latitud), long \(longitud)")
                         country.lat = latitud as! Double
                         country.long = longitud as! Double
                     }

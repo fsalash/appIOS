@@ -5,7 +5,7 @@ target 'appFinalFranSalas' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for appFinalFranSalaso
+  # Pods for appFinalFranSalas
   pod 'Alamofire'
   pod 'SVGKit' , :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
   

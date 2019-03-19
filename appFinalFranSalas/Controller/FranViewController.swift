@@ -15,8 +15,7 @@ class FranViewController:  UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("franviewcontroller")
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "paises.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondoMundo.jpeg")!)
         // Do any additional setup after loading the view.
     }
     
@@ -43,9 +42,7 @@ class FranViewController:  UIViewController {
         
         //recuperar favoritos de persistencia
         //encufarle los favoritos recuperados al tableviewcontroller destino para que lo meta en la tabla
-        print (" a favoritos")
-        
-        
+
         performSegue(withIdentifier: "segueFavoritos", sender: sender)
         
     }

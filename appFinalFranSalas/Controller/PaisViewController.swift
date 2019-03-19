@@ -19,25 +19,34 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     private let paisDetalle = DetallePaisViewController()
 
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
+        // Do any additional setup after loading the view.
+        self.paisListStorage.delegatePais = self
+        
+        paisListStorage.getPaises()
+    }
+    
+    
     // MARK: - Table view data source
     
      func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        //print("me llaman para ver cuantas secciones pintar en la tabla: 1")
         return 1
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-      
         return paisListStorage.paises.count
     }
     
   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAtIndexPath")
-        
+   
         let paisSeleccionado = paisListStorage.paises[indexPath.row]
         //segue para ir a detalle de pais
          performSegue(withIdentifier: "segueDetallePais", sender: paisSeleccionado)
@@ -73,16 +82,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     */
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("pelisviewcontroller")
-        // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
-        // Do any additional setup after loading the view.
-        self.paisListStorage.delegatePais = self
-        
-        paisListStorage.getPaises()
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -98,10 +97,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    func callSegueFromCell(myData dataobject: AnyObject) {
-        
-        performSegue(withIdentifier: "segueDetallePais", sender: self)
-    }
     
     
     /*
@@ -112,8 +107,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
      */
     
     func paisListStorage(_: PaisListStorage, didAddCountry pais: Pais) {
-        
-        //   print("han dado de alta un nuevo elemento en el array de paises -> \(pais.flag.image), \
+         
         self.tableView.reloadData()
     }
     

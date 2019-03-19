@@ -16,11 +16,11 @@ import SVGKit
         @IBOutlet weak var flag: UIImageView!
         @IBOutlet weak var lblTitulo: UILabel!
         
+        @IBOutlet weak var lblTituloPaisFavorito: UILabel!
         override func awakeFromNib() {
             super.awakeFromNib()
             // Initialization code
 
-           // print("llamada a francellview")
         }
 
         override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +35,4 @@ import SVGKit
         
     }
 
-protocol MyCustomCellDelegator {
-    func callSegueFromCell(myData dataobject: AnyObject)
-}
+

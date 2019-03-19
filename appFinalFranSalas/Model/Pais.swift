@@ -6,11 +6,11 @@
 //  Copyright © 2019 Fran. All rights reserved.
 //
 
-//Este era mi pais original antes de usar CoreData. Lo guardo como reliquia de codigo :-) por si algo va mal
 import Foundation
+import CoreData
 
 
-class Pais{
+class Pais:NSManagedObject{
     
     var name = ""
     var region = ""

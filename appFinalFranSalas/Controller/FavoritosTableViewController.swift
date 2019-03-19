@@ -12,7 +12,8 @@ import CoreData
 class FavoritosTableViewController: UITableViewController {
 
     var paisesFavoritos = [NSManagedObject]()
-    
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,22 +22,28 @@ class FavoritosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        self.tableView.register(FranTableViewCell.self, forCellReuseIdentifier: "celdaPais")
+         
     }
     
     //CORE DATA
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("willappear")
+        cargaFavoritosActuales()
+        self.tableView.reloadData()
+        
+    }
+    
+    func cargaFavoritosActuales(){
+        
+
         //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
         //2
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Pais2")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisFavorito")
         
         //3
         do {
@@ -45,10 +52,7 @@ class FavoritosTableViewController: UITableViewController {
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
-        print ("estoy aqui")
-        
     }
-    
 
     // MARK: - Table view data source
 
@@ -64,50 +68,20 @@ class FavoritosTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath) as! FranTableViewCell
 
         // Configure the cell...
 
-        let texto = paisesFavoritos[indexPath.row].value(forKey: "nombre") as! String
-        cell.textLabel?.text = texto
+        let nombrePais = paisesFavoritos[indexPath.row].value(forKey: "nombre") as! String
+        cell.lblTituloPaisFavorito.text = nombrePais
         return cell
     }
+
+   
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -118,5 +92,45 @@ class FavoritosTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let paisSeleccionado = paisesFavoritos[indexPath.row]
+        
+        //segue para ir a detalle de pais. Reutilizo codigo, funcion y controller
+        performSegue(withIdentifier: "segueDetallePaisFavorito", sender: paisSeleccionado)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueDetallePaisFavorito"
+        {
+            
+            if let destinationVC = segue.destination as? DetallePaisViewController {
+                
+                //me construyo un objeto Pais a partir del NSManagedObject guardado para pasarlo a VC destino y asi poder reutilizar
+                
+                let pais = Pais()
+                let paisNS = sender as! NSManagedObject
+                
+                pais.name = paisNS.value(forKey: "nombre") as! String
+                pais.region = paisNS.value(forKey: "region") as! String
+                pais.population = paisNS.value(forKey: "poblacion") as! Int
+                pais.capital = paisNS.value(forKey: "capital") as! String
+                pais.dataFlag = paisNS.value(forKey: "dataFlag") as! Data
+                pais.languages = paisNS.value(forKey: "idiomas") as! [String]
+                pais.currencies = paisNS.value(forKey: "monedas") as! [String]
+                pais.lat = paisNS.value(forKey: "latitud") as! Double
+                pais.long = paisNS.value(forKey: "longitud") as! Double
+      
+                destinationVC.pais = pais
+                
+            }
+        }
+    }
+
+    
 }
+

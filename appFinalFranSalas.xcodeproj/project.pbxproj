@@ -32,6 +32,7 @@
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
 		A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB10222D32B300ECF30A /* FranViewController.swift */; };
 		A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1210822357538008B0289 /* DetallePaisViewController.swift */; };
+		A1C7A6182241610B00619C72 /* fondoMundo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1C7A6172241610B00619C72 /* fondoMundo.jpeg */; };
 		A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C91ED922396EA900CA7C12 /* masInfo.png */; };
 		A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
 		A1B8CB10222D32B300ECF30A /* FranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranViewController.swift; sourceTree = "<group>"; };
 		A1C1210822357538008B0289 /* DetallePaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePaisViewController.swift; sourceTree = "<group>"; };
+		A1C7A6172241610B00619C72 /* fondoMundo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondoMundo.jpeg; sourceTree = "<group>"; };
 		A1C91ED922396EA900CA7C12 /* masInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = masInfo.png; path = appFinalFranSalas/Images/masInfo.png; sourceTree = SOURCE_ROOT; };
 		A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanderaListStorage.swift; sourceTree = "<group>"; };
 		A40BAE591CEE91215C30C432 /* Pods-appFinalFranSalas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.debug.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				A1274575223CF4A200701670 /* corazonlleno.png */,
 				A1274577223CF4A300701670 /* paises.jpeg */,
 				A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */,
+				A1C7A6172241610B00619C72 /* fondoMundo.jpeg */,
 				A1C91ED922396EA900CA7C12 /* masInfo.png */,
 			);
 			path = Images;
@@ -376,6 +379,7 @@
 				A18F474C222A9F9000401F6A /* LaunchScreen.storyboard in Resources */,
 				A18F4749222A9F9000401F6A /* Assets.xcassets in Resources */,
 				A18F4744222A9F8E00401F6A /* Main.storyboard in Resources */,
+				A1C7A6182241610B00619C72 /* fondoMundo.jpeg in Resources */,
 				A127457C223D1AA100701670 /* posEnMapa.png in Resources */,
 				A127457A223CF4A300701670 /* paises.jpeg in Resources */,
 				A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */,
