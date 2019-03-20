@@ -37,13 +37,14 @@ class FavoritosTableViewController: UITableViewController {
     func cargaFavoritosActuales(){
         
 
+         print("INICIO CARGAFAVORITOSACTUALES")
         //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
         //2
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PaisFavorito")
+        let fetchRequest = NSFetchRequest<PaisFavorito>(entityName: "PaisFavorito")
         
         //3
         do {

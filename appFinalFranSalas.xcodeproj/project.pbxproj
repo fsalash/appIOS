@@ -10,6 +10,7 @@
 		656C7089C40408B9A88D792E /* Pods_appFinalFranSalasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EB328E8AC16E3661C1E6D7 /* Pods_appFinalFranSalasTests.framework */; };
 		6E5EA9AE2DF7BE7E11E4BDCC /* Pods_appFinalFranSalas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457B59C04C704A2E52151E20 /* Pods_appFinalFranSalas.framework */; };
 		8E5C8161105190D32CCBB5D8 /* Pods_appFinalFranSalasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1024B2314216F46A167BE64 /* Pods_appFinalFranSalasUITests.framework */; };
+		A11003502242B09300CD6DE2 /* FranNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */; };
 		A1274578223CF4A300701670 /* corazonlleno.png in Resources */ = {isa = PBXBuildFile; fileRef = A1274575223CF4A200701670 /* corazonlleno.png */; };
 		A1274579223CF4A300701670 /* corazonvacio.png in Resources */ = {isa = PBXBuildFile; fileRef = A1274576223CF4A300701670 /* corazonvacio.png */; };
 		A127457A223CF4A300701670 /* paises.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1274577223CF4A300701670 /* paises.jpeg */; };
@@ -21,12 +22,14 @@
 		A18F4757222A9F9000401F6A /* appFinalFranSalasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F4756222A9F9000401F6A /* appFinalFranSalasTests.swift */; };
 		A18F4762222A9F9000401F6A /* appFinalFranSalasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F4761222A9F9000401F6A /* appFinalFranSalasUITests.swift */; };
 		A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198C0F8222D78890039E350 /* PaisViewController.swift */; };
-		A199E07D222AF940002E894D /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199E07C222AF940002E894D /* Pais.swift */; };
 		A19DF8AF223590D600546AA0 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF8AE223590D600546AA0 /* SVGKit.framework */; };
 		A1A0C9EC223D5C3C00312385 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A0C9EB223D5C3C00312385 /* CoreData.framework */; };
 		A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */; };
 		A1A0C9F0223D6FE800312385 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */; };
 		A1A0C9F3223D73D200312385 /* appFinalFranSalas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1A0C9F1223D73D200312385 /* appFinalFranSalas.xcdatamodeld */; };
+		A1A52E902242D05E00225A66 /* PaisFavorito+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A52E8F2242D05E00225A66 /* PaisFavorito+CoreDataClass.swift */; };
+		A1A52E922242D06600225A66 /* PaisFavorito+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A52E912242D06600225A66 /* PaisFavorito+CoreDataProperties.swift */; };
+		A1A52E942242D17900225A66 /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A52E932242D17900225A66 /* Pais.swift */; };
 		A1A9599E223C0E6A00A5CEC9 /* fondo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */; };
 		A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */; };
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
@@ -62,6 +65,7 @@
 		950291F1AE109458E573ECDB /* Pods-appFinalFranSalasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalasUITests.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D64AE8A8B6A2A9440C138C6 /* Pods-appFinalFranSalas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.release.xcconfig"; sourceTree = "<group>"; };
 		A1024B2314216F46A167BE64 /* Pods_appFinalFranSalasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFinalFranSalasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranNavigationViewController.swift; sourceTree = "<group>"; };
 		A1274575223CF4A200701670 /* corazonlleno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corazonlleno.png; sourceTree = "<group>"; };
 		A1274576223CF4A300701670 /* corazonvacio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corazonvacio.png; sourceTree = "<group>"; };
 		A1274577223CF4A300701670 /* paises.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paises.jpeg; sourceTree = "<group>"; };
@@ -79,13 +83,15 @@
 		A18F4761222A9F9000401F6A /* appFinalFranSalasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appFinalFranSalasUITests.swift; sourceTree = "<group>"; };
 		A18F4763222A9F9000401F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A198C0F8222D78890039E350 /* PaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisViewController.swift; sourceTree = "<group>"; };
-		A199E07C222AF940002E894D /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		A19DF8AE223590D600546AA0 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19DF8B0223590E000546AA0 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A0C9EB223D5C3C00312385 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaPaisViewController.swift; sourceTree = "<group>"; };
 		A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
 		A1A0C9F2223D73D200312385 /* PaisCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaisCoreData.xcdatamodel; sourceTree = "<group>"; };
+		A1A52E8F2242D05E00225A66 /* PaisFavorito+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PaisFavorito+CoreDataClass.swift"; path = "/Users/fran/Documents/Cursos/MIMO/Asignaturas/IOS/practicas/practicaFinal/appFinal/appFinalFranSalas/appFinalFranSalas/View Model/PaisFavorito+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		A1A52E912242D06600225A66 /* PaisFavorito+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PaisFavorito+CoreDataProperties.swift"; path = "/Users/fran/Documents/Cursos/MIMO/Asignaturas/IOS/practicas/practicaFinal/appFinal/appFinalFranSalas/appFinalFranSalas/Model/PaisFavorito+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		A1A52E932242D17900225A66 /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 		A1A9599D223C0E6A00A5CEC9 /* fondo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo.jpg; sourceTree = "<group>"; };
 		A1B8CAC3222C2D6E00ECF30A /* PaisListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisListStorage.swift; sourceTree = "<group>"; };
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,8 +215,10 @@
 		A1B8CABF222C299B00ECF30A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1A52E912242D06600225A66 /* PaisFavorito+CoreDataProperties.swift */,
+				A1A52E8F2242D05E00225A66 /* PaisFavorito+CoreDataClass.swift */,
 				A1A0C9F1223D73D200312385 /* appFinalFranSalas.xcdatamodeld */,
-				A199E07C222AF940002E894D /* Pais.swift */,
+				A1A52E932242D17900225A66 /* Pais.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			children = (
 				A1C1210822357538008B0289 /* DetallePaisViewController.swift */,
 				A1B8CB10222D32B300ECF30A /* FranViewController.swift */,
+				A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */,
 				A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */,
 				A198C0F8222D78890039E350 /* PaisViewController.swift */,
 				A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */,
@@ -512,12 +521,15 @@
 			files = (
 				A198C0F9222D78890039E350 /* PaisViewController.swift in Sources */,
 				A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */,
+				A1A52E942242D17900225A66 /* Pais.swift in Sources */,
 				A1A0C9F0223D6FE800312385 /* FavoritosTableViewController.swift in Sources */,
 				A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */,
+				A1A52E922242D06600225A66 /* PaisFavorito+CoreDataProperties.swift in Sources */,
 				A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */,
 				A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */,
 				A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */,
-				A199E07D222AF940002E894D /* Pais.swift in Sources */,
+				A11003502242B09300CD6DE2 /* FranNavigationViewController.swift in Sources */,
+				A1A52E902242D05E00225A66 /* PaisFavorito+CoreDataClass.swift in Sources */,
 				A1A0C9F3223D73D200312385 /* appFinalFranSalas.xcdatamodeld in Sources */,
 				A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */,
 				A18F473F222A9F8E00401F6A /* AppDelegate.swift in Sources */,

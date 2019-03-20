@@ -25,6 +25,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
         // Do any additional setup after loading the view.
+        
         self.paisListStorage.delegatePais = self
         
         paisListStorage.getPaises()
@@ -59,7 +60,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
          as! FranTableViewCell
         
-        cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
+        cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name as! String
         cell.flag.image = UIImage(named: "masInfo.png")
         
         

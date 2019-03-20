@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/fran/Documents/Cursos/MIMO/Asignaturas/IOS/practicas/practicaFinal/appFinal/appFinalFranSalas/appFinalFranSalas/View Model/PaisFavorito+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/fran/Documents/Cursos/MIMO/Asignaturas/IOS/practicas/practicaFinal/appFinal/appFinalFranSalas/appFinalFranSalas/Model/PaisFavorito+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:appFinalFranSalas.xcodeproj">
    </FileRef>
    <FileRef

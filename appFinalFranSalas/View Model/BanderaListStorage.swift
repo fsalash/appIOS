@@ -17,7 +17,7 @@ class BanderaListStorage
     //Metodo para obtener las banderas. Ahora no lo usaré en la pantalla principal.
     func getBandera(pais: Pais){
 
-        let urlBandera = URL(string: pais.flag)
+        let urlBandera = URL(string: pais.flag as String)
 
         
         Alamofire.request(urlBandera!).response { response in
@@ -31,7 +31,7 @@ class BanderaListStorage
             
             let imagen = image
             
-            pais.dataFlag = imagen
+            pais.dataFlag = imagen as Data
             
             self.delegateBandera?.banderaStorage(self, banderaLista: pais)
         }

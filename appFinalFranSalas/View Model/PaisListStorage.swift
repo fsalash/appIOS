@@ -86,8 +86,8 @@ class PaisListStorage
                         let latitud = latlng[0]
                         let longitud  = latlng[1]
                         
-                        country.lat = latitud as! Double
-                        country.long = longitud as! Double
+                        country.lat = Double(truncating: latitud)
+                        country.long = Double(truncating: longitud)
                     }
                     
                     self.paises.append(country)

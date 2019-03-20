@@ -12,11 +12,14 @@ import CoreData
 class FranViewController:  UIViewController {
 
     var favoritos = [NSManagedObject]()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondoMundo.jpeg")!)
         // Do any additional setup after loading the view.
+        
+        
     }
     
    

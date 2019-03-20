@@ -27,7 +27,7 @@ class MapaPaisViewController: UIViewController,MKMapViewDelegate {
         let latitude:CLLocationDegrees = latitud
         let longitude:CLLocationDegrees = longitud
         
-        print ("latitud: --> \(latitud)")
+        print ("latitud: --> \(latitude)")
         print ("longitud: --> \(longitud)")
         
         //ejemplo http://www.codemaycauseheadache.com/2016/01/24/swift-mapa-marcadores-personalizado-mapkit/
