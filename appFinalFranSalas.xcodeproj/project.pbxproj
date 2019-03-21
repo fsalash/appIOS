@@ -10,7 +10,6 @@
 		656C7089C40408B9A88D792E /* Pods_appFinalFranSalasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EB328E8AC16E3661C1E6D7 /* Pods_appFinalFranSalasTests.framework */; };
 		6E5EA9AE2DF7BE7E11E4BDCC /* Pods_appFinalFranSalas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457B59C04C704A2E52151E20 /* Pods_appFinalFranSalas.framework */; };
 		8E5C8161105190D32CCBB5D8 /* Pods_appFinalFranSalasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1024B2314216F46A167BE64 /* Pods_appFinalFranSalasUITests.framework */; };
-		A11003502242B09300CD6DE2 /* FranNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */; };
 		A1274578223CF4A300701670 /* corazonlleno.png in Resources */ = {isa = PBXBuildFile; fileRef = A1274575223CF4A200701670 /* corazonlleno.png */; };
 		A1274579223CF4A300701670 /* corazonvacio.png in Resources */ = {isa = PBXBuildFile; fileRef = A1274576223CF4A300701670 /* corazonvacio.png */; };
 		A127457A223CF4A300701670 /* paises.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1274577223CF4A300701670 /* paises.jpeg */; };
@@ -38,6 +37,8 @@
 		A1C7A6182241610B00619C72 /* fondoMundo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1C7A6172241610B00619C72 /* fondoMundo.jpeg */; };
 		A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C91ED922396EA900CA7C12 /* masInfo.png */; };
 		A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */; };
+		A1CABE0D2243FAD600AE2E9C /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1CABE0C2243FAD600AE2E9C /* stars.jpeg */; };
+		A1CABE0F2243FDD500AE2E9C /* logoMimo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1CABE0E2243FDD400AE2E9C /* logoMimo.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,6 @@
 		950291F1AE109458E573ECDB /* Pods-appFinalFranSalasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalasUITests.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalasUITests/Pods-appFinalFranSalasUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D64AE8A8B6A2A9440C138C6 /* Pods-appFinalFranSalas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.release.xcconfig"; sourceTree = "<group>"; };
 		A1024B2314216F46A167BE64 /* Pods_appFinalFranSalasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appFinalFranSalasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranNavigationViewController.swift; sourceTree = "<group>"; };
 		A1274575223CF4A200701670 /* corazonlleno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corazonlleno.png; sourceTree = "<group>"; };
 		A1274576223CF4A300701670 /* corazonvacio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corazonvacio.png; sourceTree = "<group>"; };
 		A1274577223CF4A300701670 /* paises.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paises.jpeg; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 		A1C7A6172241610B00619C72 /* fondoMundo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondoMundo.jpeg; sourceTree = "<group>"; };
 		A1C91ED922396EA900CA7C12 /* masInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = masInfo.png; path = appFinalFranSalas/Images/masInfo.png; sourceTree = SOURCE_ROOT; };
 		A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanderaListStorage.swift; sourceTree = "<group>"; };
+		A1CABE0C2243FAD600AE2E9C /* stars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpeg; sourceTree = "<group>"; };
+		A1CABE0E2243FDD400AE2E9C /* logoMimo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoMimo.jpeg; sourceTree = "<group>"; };
 		A40BAE591CEE91215C30C432 /* Pods-appFinalFranSalas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.debug.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.debug.xcconfig"; sourceTree = "<group>"; };
 		D15145C4C5211CF5D93A978B /* Pods-appFinalFranSalasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalasTests.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 				A1B8CABF222C299B00ECF30A /* Model */,
 				A1B8CAC0222C29A300ECF30A /* Images */,
 				A18F4742222A9F8E00401F6A /* Main.storyboard */,
+				A1CABE0E2243FDD400AE2E9C /* logoMimo.jpeg */,
 				A18F4748222A9F9000401F6A /* Assets.xcassets */,
 				A18F474A222A9F9000401F6A /* LaunchScreen.storyboard */,
 				A18F474D222A9F9000401F6A /* Info.plist */,
@@ -226,6 +229,7 @@
 		A1B8CAC0222C29A300ECF30A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A1CABE0C2243FAD600AE2E9C /* stars.jpeg */,
 				A127457B223D1AA100701670 /* posEnMapa.png */,
 				A1274576223CF4A300701670 /* corazonvacio.png */,
 				A1274575223CF4A200701670 /* corazonlleno.png */,
@@ -251,7 +255,6 @@
 			children = (
 				A1C1210822357538008B0289 /* DetallePaisViewController.swift */,
 				A1B8CB10222D32B300ECF30A /* FranViewController.swift */,
-				A110034F2242B09300CD6DE2 /* FranNavigationViewController.swift */,
 				A1A0C9EF223D6FE800312385 /* FavoritosTableViewController.swift */,
 				A198C0F8222D78890039E350 /* PaisViewController.swift */,
 				A1A0C9ED223D646600312385 /* MapaPaisViewController.swift */,
@@ -388,8 +391,10 @@
 				A18F474C222A9F9000401F6A /* LaunchScreen.storyboard in Resources */,
 				A18F4749222A9F9000401F6A /* Assets.xcassets in Resources */,
 				A18F4744222A9F8E00401F6A /* Main.storyboard in Resources */,
+				A1CABE0F2243FDD500AE2E9C /* logoMimo.jpeg in Resources */,
 				A1C7A6182241610B00619C72 /* fondoMundo.jpeg in Resources */,
 				A127457C223D1AA100701670 /* posEnMapa.png in Resources */,
+				A1CABE0D2243FAD600AE2E9C /* stars.jpeg in Resources */,
 				A127457A223CF4A300701670 /* paises.jpeg in Resources */,
 				A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */,
 				A1A9599E223C0E6A00A5CEC9 /* fondo.jpg in Resources */,
@@ -528,7 +533,6 @@
 				A1A0C9EE223D646600312385 /* MapaPaisViewController.swift in Sources */,
 				A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */,
 				A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */,
-				A11003502242B09300CD6DE2 /* FranNavigationViewController.swift in Sources */,
 				A1A52E902242D05E00225A66 /* PaisFavorito+CoreDataClass.swift in Sources */,
 				A1A0C9F3223D73D200312385 /* appFinalFranSalas.xcdatamodeld in Sources */,
 				A1B8CAC4222C2D6E00ECF30A /* PaisListStorage.swift in Sources */,

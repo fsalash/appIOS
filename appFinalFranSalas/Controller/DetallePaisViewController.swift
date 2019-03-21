@@ -303,6 +303,61 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         self.present(alert, animated: true)
     }
     
+    
+    //https://stackoverflow.com/questions/25959347/different-portrait-landscape-views-in-storyboard-and-swift
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        /*
+        let padding: CGFloat = 16.0
+        
+        // since we're calling this before the rotation, the height and width are swapped
+        let viewHeight = self.view.frame.size.width
+        let viewWidth = self.view.frame.size.height
+        
+        // if landscape
+         */
+        if UIInterfaceOrientationIsLandscape(toInterfaceOrientation) {
+            
+            print(self.view.constraints)
+           /*
+            greenViewTrailingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
+            greenViewBottomConstraint.constant = padding
+            
+            blueViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
+            blueViewTrailingConstraint.constant = padding
+            blueViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
+            
+            redViewTopConstraint.constant = padding
+            redViewBottomConstraint.constant = (viewHeight/2.0) + (padding/2.0)
+            redViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
+             */
+            print("horizontal")
+        } else { // else portrait
+            /*
+            greenViewBottomConstraint.constant = (viewHeight/2.0) + (padding/2.0)
+            greenViewTrailingConstraint.constant = padding
+            
+            blueViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
+            blueViewTrailingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
+            blueViewLeadingConstraint.constant = padding
+            
+            redViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
+            redViewBottomConstraint.constant = padding
+            redViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
+             */
+            print("vertical")
+        
+        }
+    
+        let viewHeight = self.view.frame.size.width
+        let viewWidth = self.view.frame.size.height
+        
+        print("me han rotado la pantalla")
+        print("anchura --> \(viewWidth), altura -> \(viewHeight)")
+    }
+ 
+ 
+        
+    
 
 }
 

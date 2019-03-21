@@ -16,7 +16,7 @@ class FranViewController:  UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondoMundo.jpeg")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "stars.jpeg")!)
         // Do any additional setup after loading the view.
         
         

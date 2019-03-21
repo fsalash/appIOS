@@ -9,17 +9,18 @@ import Foundation
 import UIKit
 import SVGKit
 
-class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate {
-   
+class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, PaisListStorageDelegate,UISearchBarDelegate {
     
     @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+  
     private  var flag = Data()
     private let paisListStorage = PaisListStorage ()
     private let paisDetalle = DetallePaisViewController()
 
-    
-    
+    var filteredCountries = [Pais]()
+    var searchActive = false
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +28,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Do any additional setup after loading the view.
         
         self.paisListStorage.delegatePais = self
-        
+        self.searchBar.delegate = self
         paisListStorage.getPaises()
     }
     
@@ -41,14 +42,27 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return paisListStorage.paises.count
+        
+        if (searchActive == false) {
+                return paisListStorage.paises.count
+        }
+        else {
+            //Me actualizan por barra de busqueda
+            return filteredCountries.count
+        }
+    
     }
     
   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
    
-        let paisSeleccionado = paisListStorage.paises[indexPath.row]
+        
+        var paisSeleccionado = paisListStorage.paises[indexPath.row]
+        
+         if (searchActive == true) {
+            paisSeleccionado = self.filteredCountries[indexPath.row]
+        }
         //segue para ir a detalle de pais
          performSegue(withIdentifier: "segueDetallePais", sender: paisSeleccionado)
     }
@@ -60,10 +74,13 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPais", for: indexPath)
          as! FranTableViewCell
         
-        cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name as! String
-        cell.flag.image = UIImage(named: "masInfo.png")
+        if (searchActive == false) {
+            cell.lblTitulo.text = paisListStorage.paises[indexPath.row].name
+        }else{
+            cell.lblTitulo.text = filteredCountries[indexPath.row].name
+        }
         
-        
+          cell.flag.image = UIImage(named: "masInfo.png")
       
         return cell
     }
@@ -72,7 +89,27 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return 100
     }
     
-
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    
+        self.filteredCountries  = paisListStorage.paises.filter { (p: Pais) -> Bool in
+            
+            if p.name.lowercased().contains(searchText.lowercased()){
+                return true
+            } else{
+                return false
+            }
+        }
+        
+        if(self.filteredCountries.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -111,9 +148,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
          
         self.tableView.reloadData()
     }
-    
-   
-    
     
    
     
