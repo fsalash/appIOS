@@ -27,14 +27,13 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     var pais = Pais()
     
     var favoritos = [NSManagedObject]()
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+
         self.banderaListStorage.delegateBandera = self
-      print("viewDidLoad detallePais")
-        if((pais.dataFlag as! Data).count > 0){
+    
+        if((pais.dataFlag ).count > 0){
             //me han llamado desde favoritos y ya tengo toda la info del pais--> Monto la vista
             montaVista(country: pais)
             esFavorito = true
@@ -50,7 +49,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     //CORE DATA
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear en detallePais")
+
        recargaContextoFavoritos()
         
         
@@ -71,11 +70,12 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         if segue.identifier == "segueMapaPais"
         {
             if let destinationVC = segue.destination as? MapaPaisViewController {
-                destinationVC.latitud = self.pais.lat as! Double
-                destinationVC.longitud = self.pais.long as! Double
-                destinationVC.nombrePais = self.pais.name as! String
+                destinationVC.latitud = self.pais.lat
+                destinationVC.longitud = self.pais.long
+                destinationVC.nombrePais = self.pais.name
             }
         }
+
     }
     
     @IBAction func posMapa(_ sender: Any) {
@@ -100,7 +100,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
 
     func montaVista(country: Pais){
         
-        let imagenSVG = SVGKFastImageView(svgkImage: SVGKImage(data: country.dataFlag as! Data))
+        let imagenSVG = SVGKFastImageView(svgkImage: SVGKImage(data: country.dataFlag ))
         
         imgBanderaPais.image = imagenSVG?.image.uiImage
         lblDetallePais.text = pais.name as String
@@ -109,9 +109,9 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         
         for lang in pais.languages{
             
-            if((lang as! String).count > 0){ // me vienen del parseo algunos valores a linea en blanco que no pinto
+            if((lang ).count > 0){ // me vienen del parseo algunos valores a linea en blanco que no pinto
                 let bulletPoint: String = "\u{2022}"
-                let fila = bulletPoint + " " +  (lang as! String) + "\n"
+                let fila = bulletPoint + " " +  (lang ) + "\n"
                 txtIdiomas.text?.append(fila)
                 
             }
@@ -133,7 +133,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         
         
         //por defecto tiene puesto el corazon vacio en el storyBoard
-        if (esFavorito(nombrePais : pais.name as! String)){
+        if (esFavorito(nombrePais : pais.name )){
             imgFavorito.image = UIImage(named: "corazonlleno.png")
             esFavorito = true
         }
@@ -150,7 +150,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         //print("DetallePaisViewController")
     
         //Me traigo los favoritos para saber si debo pintar el corazon lleno o vacio
-    print("INICIO ESFAVORITO")
+
         //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -203,7 +203,6 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     func saveFavorito(_ objPais: Pais) {
         
-        print("INICIO SAVEFAVORITO")
         //1
         let appDelegate =
             UIApplication.shared.delegate as! AppDelegate
@@ -241,8 +240,6 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     func deleteFavorito(_ objPais: Pais) {
         
-         print("INICIO DELETEFAVORITO")
-        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PaisFavorito")
     
         fetchRequest.predicate = NSPredicate(format: "nombre = %@", objPais.name)
@@ -275,8 +272,6 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     func recargaContextoFavoritos(){
         
-        
-         print("INICIO RECARGACONTEXTOFAVORITO")
         //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -303,62 +298,24 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         self.present(alert, animated: true)
     }
     
-    
-    //https://stackoverflow.com/questions/25959347/different-portrait-landscape-views-in-storyboard-and-swift
-    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        /*
-        let padding: CGFloat = 16.0
-        
-        // since we're calling this before the rotation, the height and width are swapped
-        let viewHeight = self.view.frame.size.width
-        let viewWidth = self.view.frame.size.height
-        
-        // if landscape
-         */
-        if UIInterfaceOrientationIsLandscape(toInterfaceOrientation) {
-            
-            print(self.view.constraints)
-           /*
-            greenViewTrailingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
-            greenViewBottomConstraint.constant = padding
-            
-            blueViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
-            blueViewTrailingConstraint.constant = padding
-            blueViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
-            
-            redViewTopConstraint.constant = padding
-            redViewBottomConstraint.constant = (viewHeight/2.0) + (padding/2.0)
-            redViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
-             */
-            print("horizontal")
-        } else { // else portrait
-            /*
-            greenViewBottomConstraint.constant = (viewHeight/2.0) + (padding/2.0)
-            greenViewTrailingConstraint.constant = padding
-            
-            blueViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
-            blueViewTrailingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
-            blueViewLeadingConstraint.constant = padding
-            
-            redViewLeadingConstraint.constant = (viewWidth/2.0) + (padding/2.0)
-            redViewBottomConstraint.constant = padding
-            redViewTopConstraint.constant = (viewHeight/2.0) + (padding/2.0)
-             */
-            print("vertical")
-        
-        }
-    
-        let viewHeight = self.view.frame.size.width
-        let viewWidth = self.view.frame.size.height
-        
-        print("me han rotado la pantalla")
-        print("anchura --> \(viewWidth), altura -> \(viewHeight)")
-    }
- 
- 
-        
-    
 
+    //deteccion transicion modo horizontal - vertical
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            
+            print(size.height)
+            print(size.width)
+            
+        } else {
+           print("Portrait")
+            print(size.height)
+            print(size.width)
+        }
+    }
+    
+    
 }
 
 

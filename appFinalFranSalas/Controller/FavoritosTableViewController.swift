@@ -37,8 +37,6 @@ class FavoritosTableViewController: UITableViewController {
     func cargaFavoritosActuales(){
         
 
-         print("INICIO CARGAFAVORITOSACTUALES")
-        //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
