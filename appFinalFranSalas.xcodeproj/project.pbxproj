@@ -39,6 +39,7 @@
 		A1C91EDC22397DBE00CA7C12 /* BanderaListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */; };
 		A1CABE0D2243FAD600AE2E9C /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1CABE0C2243FAD600AE2E9C /* stars.jpeg */; };
 		A1CABE0F2243FDD500AE2E9C /* logoMimo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A1CABE0E2243FDD400AE2E9C /* logoMimo.jpeg */; };
+		A1E24E60224AB4250031BA27 /* appFinalFranSalas.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = A1E24E5F224AB4240031BA27 /* appFinalFranSalas.mobileprovision */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		A1C91EDB22397DBE00CA7C12 /* BanderaListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanderaListStorage.swift; sourceTree = "<group>"; };
 		A1CABE0C2243FAD600AE2E9C /* stars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpeg; sourceTree = "<group>"; };
 		A1CABE0E2243FDD400AE2E9C /* logoMimo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoMimo.jpeg; sourceTree = "<group>"; };
+		A1E24E5F224AB4240031BA27 /* appFinalFranSalas.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = appFinalFranSalas.mobileprovision; path = ../../../../../../../../../Downloads/appFinalFranSalas.mobileprovision; sourceTree = "<group>"; };
 		A40BAE591CEE91215C30C432 /* Pods-appFinalFranSalas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalas.debug.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalas/Pods-appFinalFranSalas.debug.xcconfig"; sourceTree = "<group>"; };
 		D15145C4C5211CF5D93A978B /* Pods-appFinalFranSalasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appFinalFranSalasTests.release.xcconfig"; path = "Target Support Files/Pods-appFinalFranSalasTests/Pods-appFinalFranSalasTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 		A18F4732222A9F8E00401F6A = {
 			isa = PBXGroup;
 			children = (
+				A1E24E5F224AB4240031BA27 /* appFinalFranSalas.mobileprovision */,
 				A18F473D222A9F8E00401F6A /* appFinalFranSalas */,
 				A18F4755222A9F9000401F6A /* appFinalFranSalasTests */,
 				A18F4760222A9F9000401F6A /* appFinalFranSalasUITests */,
@@ -347,6 +350,7 @@
 				TargetAttributes = {
 					A18F473A222A9F8E00401F6A = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = A5UCFNWB8C;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -396,6 +400,7 @@
 				A127457C223D1AA100701670 /* posEnMapa.png in Resources */,
 				A1CABE0D2243FAD600AE2E9C /* stars.jpeg in Resources */,
 				A127457A223CF4A300701670 /* paises.jpeg in Resources */,
+				A1E24E60224AB4250031BA27 /* appFinalFranSalas.mobileprovision in Resources */,
 				A1C91EDA22396EA900CA7C12 /* masInfo.png in Resources */,
 				A1A9599E223C0E6A00A5CEC9 /* fondo.jpg in Resources */,
 				A1274579223CF4A300701670 /* corazonvacio.png in Resources */,
@@ -712,11 +717,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = appFinalFranSalas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.appFinalFranSalas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = appFinalFranSalas;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,11 +738,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = appFinalFranSalas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = es.mimo.upsa.appFinalFranSalas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.appFinalFranSalas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = appFinalFranSalas;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
