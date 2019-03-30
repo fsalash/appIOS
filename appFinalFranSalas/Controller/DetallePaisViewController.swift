@@ -11,15 +11,7 @@ import SVGKit
 import CoreData
 
 class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
-  
-  
-    @IBOutlet weak var txtCapital: UILabel!
-    @IBOutlet weak var txtRegion: UILabel!
-    @IBOutlet weak var txtIdiomas: UILabel!
-    @IBOutlet weak var txtPoblacion: UILabel!
-    @IBOutlet weak var txtMonedas: UILabel!
-    @IBOutlet weak var lblDetallePais: UILabel!
-    @IBOutlet weak var imgBanderaPais: UIImageView!
+
     @IBOutlet weak var imgFavorito: UIImageView!
     
     private let banderaListStorage = BanderaListStorage ()
@@ -33,15 +25,18 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
 
         self.banderaListStorage.delegateBandera = self
     
+        
         if((pais.dataFlag ).count > 0){
-            //me han llamado desde favoritos y ya tengo toda la info del pais--> Monto la vista
+            //ya tengo toda la info del pais incluida bandera--> Monto la vista
             montaVista(country: pais)
             esFavorito = true
         }
+            
         else{
+            //todavia no he recuperado la bandera
            self.banderaListStorage.getBandera(pais: pais)
         }
-        
+       
         
     }
 
@@ -67,20 +62,40 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print("prepareForSegue")
-        if segue.identifier == "segueMapaPais"
-        {
-            if let destinationVC = segue.destination as? MapaPaisViewController {
-                destinationVC.latitud = self.pais.lat
-                destinationVC.longitud = self.pais.long
-                destinationVC.nombrePais = self.pais.name
+        
+        switch segue.identifier{
+            
+            case "segueMapaPais":
+                if let destinationVC = segue.destination as? MapaPaisViewController{
+                    destinationVC.latitud = self.pais.lat
+                    destinationVC.longitud = self.pais.long
+                    destinationVC.nombrePais = self.pais.name
             }
+            case "segueCapital":
+                if let destinationVC = segue.destination as? CapitalPaisViewController {
+                        destinationVC.pais.region = self.pais.region
+                        destinationVC.pais.capital = self.pais.capital
+                        destinationVC.pais.dataFlag = self.pais.dataFlag
+                        destinationVC.pais.name = self.pais.name
+            }
+            case "segueIdiomas":
+                if let destinationVC = segue.destination as? IdiomasPaisViewController{
+                        destinationVC.pais.name = self.pais.name
+                        destinationVC.pais.languages = self.pais.languages
+            }
+            
+            case "segueMonedas":
+            if let destinationVC = segue.destination as? MonedasPaisViewController{
+                destinationVC.pais.name = self.pais.name
+                destinationVC.pais.currencies = self.pais.currencies
+            }
+            
+            
+            default:
+            print("ni idea de como ha llegado aqui si no hay segue definido")
+        
         }
 
-    }
-    
-    @IBAction func posMapa(_ sender: Any) {
-        
-        performSegue(withIdentifier: "segueMapaPais", sender: self)
     }
    
     /*
@@ -92,20 +107,22 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
     
     func banderaStorage(_: BanderaListStorage, banderaLista country: Pais) {
         
-        
-        montaVista(country:country)
+        print("ya tengo listos los datos de la bandera por si pulsaran en capital")
+        //montaVista(country:country)
         
     }
     
 
     func montaVista(country: Pais){
         
+        /*
         let imagenSVG = SVGKFastImageView(svgkImage: SVGKImage(data: country.dataFlag ))
         
         imgBanderaPais.image = imagenSVG?.image.uiImage
-        lblDetallePais.text = pais.name as String
+        //lblDetallePais.text = pais.name as String
         txtCapital.text = pais.capital as String
         txtRegion.text = pais.region as String
+        
         
         for lang in pais.languages{
             
@@ -127,10 +144,12 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
                 
             }
         }
+ 
         
         
         txtPoblacion.text   = String(pais.population)
         
+ */
         
         //por defecto tiene puesto el corazon vacio en el storyBoard
         if (esFavorito(nombrePais : pais.name )){
@@ -176,14 +195,38 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         return false
     }
     
+
     
     /*
-     // MARK: - TapGesture sobre corazon para favoritos
+     // MARK: - TapGestures
      
-     // Almacenar paises favoritos para trabajar con persistencia
-     }
      */
-    @IBAction func tocanBtnFavorito(_ sender: Any) {
+    
+    // Muestra segue para ver bandera, capital y region
+     @IBAction func tocaBtnCapital(_ sender: Any) {
+     
+     performSegue(withIdentifier: "segueCapital", sender: self)
+     
+     }
+    
+    // Muestra segue para ver idiomas del pais
+     @IBAction func tocaBtnIdiomas(_ sender: Any) {
+     
+     performSegue(withIdentifier: "segueIdiomas", sender: self)
+     }
+    
+    @IBAction func tocaBtnMonedas(_ sender: Any) {
+        performSegue(withIdentifier: "segueMonedas", sender: self)
+    }
+    // Muestra segue para ver el pais en mapa aereo
+     @IBAction func tocaBtnMapa(_ sender: Any) {
+     
+     performSegue(withIdentifier: "segueMapaPais", sender: self)
+     }
+    
+     // Almacenar paises favoritos para trabajar con persistencia
+
+    @IBAction func tocaBtnFavorito(_ sender: Any) {
         
         if (esFavorito){
             print ("eliminar como favorito")

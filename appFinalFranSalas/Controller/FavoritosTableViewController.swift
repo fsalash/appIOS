@@ -98,13 +98,13 @@ class FavoritosTableViewController: UITableViewController {
         let paisSeleccionado = paisesFavoritos[indexPath.row]
         
         //segue para ir a detalle de pais. Reutilizo codigo, funcion y controller
-        performSegue(withIdentifier: "segueDetallePaisFavorito", sender: paisSeleccionado)
+        performSegue(withIdentifier: "segueMenuInfoFavorito", sender: paisSeleccionado)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "segueDetallePaisFavorito"
+        if segue.identifier == "segueMenuInfoFavorito"
         {
             
             if let destinationVC = segue.destination as? DetallePaisViewController {

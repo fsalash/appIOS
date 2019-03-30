@@ -27,6 +27,8 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo.jpg")!)
         // Do any additional setup after loading the view.
         
+        
+        
         self.paisListStorage.delegatePais = self
         self.searchBar.delegate = self
         paisListStorage.getPaises()
@@ -63,8 +65,8 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
          if (searchActive == true) {
             paisSeleccionado = self.filteredCountries[indexPath.row]
         }
-        //segue para ir a detalle de pais
-         performSegue(withIdentifier: "segueDetallePais", sender: paisSeleccionado)
+        //segue para ir a menu de pais
+         performSegue(withIdentifier: "segueMenuInfo", sender: paisSeleccionado)
     }
     
     
@@ -80,8 +82,6 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.lblTitulo.text = filteredCountries[indexPath.row].name
         }
         
-          cell.flag.image = UIImage(named: "masInfo.png")
-      
         return cell
     }
     
@@ -124,7 +124,7 @@ class PaisViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print("prepareForSegue")
-        if segue.identifier == "segueDetallePais"
+        if segue.identifier == "segueMenuInfo"
         {
             let pais = sender as! Pais
             if let destinationVC = segue.destination as? DetallePaisViewController {

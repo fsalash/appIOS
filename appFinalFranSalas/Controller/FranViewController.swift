@@ -14,11 +14,14 @@ class FranViewController:  UIViewController {
     var favoritos = [NSManagedObject]()
   
     
+    @IBOutlet weak var imagenAnimada: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "stars.jpeg")!)
         // Do any additional setup after loading the view.
         
+        imagenAnimada.image = UIImage.animatedImageNamed("flag-", duration: 20)
         
     }
     
