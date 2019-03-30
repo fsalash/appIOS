@@ -11,7 +11,7 @@ import SVGKit
 import CoreData
 
 class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
-
+ 
     @IBOutlet weak var imgFavorito: UIImageView!
     
     private let banderaListStorage = BanderaListStorage ()
@@ -195,8 +195,7 @@ class DetallePaisViewController: UIViewController,BanderaListStorageDelegate {
         return false
     }
     
-
-    
+ 
     /*
      // MARK: - TapGestures
      
