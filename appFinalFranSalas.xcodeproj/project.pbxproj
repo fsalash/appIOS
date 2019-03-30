@@ -34,6 +34,7 @@
 		A1B8CB0F222D30B900ECF30A /* FranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */; };
 		A1B8CB11222D32B300ECF30A /* FranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8CB10222D32B300ECF30A /* FranViewController.swift */; };
 		A1C1210922357538008B0289 /* DetallePaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1210822357538008B0289 /* DetallePaisViewController.swift */; };
+		A1C4D1C1224FCD5D000F2E9C /* Images in Resources */ = {isa = PBXBuildFile; fileRef = A1C4D1C0224FCD5D000F2E9C /* Images */; };
 		A1C50171224F63CA00FD595B /* logoUni.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1C50170224F63C900FD595B /* logoUni.jpg */; };
 		A1C50173224F652800FD595B /* logoupsa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1C50172224F652800FD595B /* logoupsa.jpg */; };
 		A1C5017E224F6C7F00FD595B /* flag-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C50174224F6C7E00FD595B /* flag-10.png */; };
@@ -126,6 +127,7 @@
 		A1B8CB0E222D30B900ECF30A /* FranTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranTableViewCell.swift; sourceTree = "<group>"; };
 		A1B8CB10222D32B300ECF30A /* FranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranViewController.swift; sourceTree = "<group>"; };
 		A1C1210822357538008B0289 /* DetallePaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePaisViewController.swift; sourceTree = "<group>"; };
+		A1C4D1C0224FCD5D000F2E9C /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; sourceTree = "<group>"; };
 		A1C50170224F63C900FD595B /* logoUni.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoUni.jpg; sourceTree = "<group>"; };
 		A1C50172224F652800FD595B /* logoupsa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoupsa.jpg; sourceTree = "<group>"; };
 		A1C50174224F6C7E00FD595B /* flag-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flag-10.png"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		A1B8CAC0222C29A300ECF30A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A1C4D1C0224FCD5D000F2E9C /* Images */,
 				A1C501A0224F749600FD595B /* capital.jpeg */,
 				A1C5019E224F73B800FD595B /* idioma.jpg */,
 				A1C5019C224F738400FD595B /* moneda.jpeg */,
@@ -488,6 +491,7 @@
 				A1C50198224F733100FD595B /* flag-12.png in Resources */,
 				A1C50199224F733100FD595B /* flag-16.png in Resources */,
 				A1C50171224F63CA00FD595B /* logoUni.jpg in Resources */,
+				A1C4D1C1224FCD5D000F2E9C /* Images in Resources */,
 				A1C5017E224F6C7F00FD595B /* flag-10.png in Resources */,
 				A1C5017F224F6C7F00FD595B /* flag-6.png in Resources */,
 				A1C50192224F733100FD595B /* flag-11.png in Resources */,
